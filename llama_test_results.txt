@@ -1,0 +1,558 @@
+--- Test Case 32 ---
+test_find_zero (builtins.TestFindZero1.test_find_zero) ... ERROR
+test_find_zero (builtins.TestFindZero2.test_find_zero) ... ERROR
+
+======================================================================
+ERROR: test_find_zero (builtins.TestFindZero1.test_find_zero)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<string>", line 8, in test_find_zero
+  File "<string>", line 6, in find_zero
+  File "C:\Users\Mahmutcan\anaconda3\Lib\site-packages\scipy\optimize\_zeros_py.py", line 806, in brentq
+    r = _zeros._brentq(f, a, b, xtol, rtol, maxiter, args, full_output, disp)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mahmutcan\anaconda3\Lib\site-packages\scipy\optimize\_zeros_py.py", line 94, in f_raise
+    fx = f(x, *args)
+         ^^^^^^^^^^^
+  File "<string>", line 5, in f
+NameError: name 'poly' is not defined
+
+======================================================================
+ERROR: test_find_zero (builtins.TestFindZero2.test_find_zero)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<string>", line 10, in test_find_zero
+  File "<string>", line 6, in find_zero
+  File "C:\Users\Mahmutcan\anaconda3\Lib\site-packages\scipy\optimize\_zeros_py.py", line 806, in brentq
+    r = _zeros._brentq(f, a, b, xtol, rtol, maxiter, args, full_output, disp)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mahmutcan\anaconda3\Lib\site-packages\scipy\optimize\_zeros_py.py", line 94, in f_raise
+    fx = f(x, *args)
+         ^^^^^^^^^^^
+  File "<string>", line 5, in f
+NameError: name 'poly' is not defined
+
+----------------------------------------------------------------------
+Ran 2 tests in 0.003s
+
+FAILED (errors=2)
+
+--- Test Case 34 ---
+test_unique (builtins.TestUniqueFunction.test_unique) ... ok
+test_empty_list (builtins.TestUniqueFunctionEdgeCases.test_empty_list) ... ok
+test_single_element_list (builtins.TestUniqueFunctionEdgeCases.test_single_element_list) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.000s
+
+OK
+
+--- Test Case 38 ---
+test_decode_cyclic (builtins.TestDecodeCyclic1.test_decode_cyclic) ... FAIL
+test_decode_cyclic (builtins.TestDecodeCyclic2.test_decode_cyclic) ... FAIL
+
+======================================================================
+FAIL: test_decode_cyclic (builtins.TestDecodeCyclic1.test_decode_cyclic)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<string>", line 5, in test_decode_cyclic
+AssertionError: 'cab' != 'bca'
+- cab
+?   -
++ bca
+? +
+
+
+======================================================================
+FAIL: test_decode_cyclic (builtins.TestDecodeCyclic2.test_decode_cyclic)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<string>", line 6, in test_decode_cyclic
+AssertionError: 'cabfdeigh' != 'bcaefdihg'
+- cabfdeigh
++ bcaefdihg
+
+
+----------------------------------------------------------------------
+Ran 2 tests in 0.000s
+
+FAILED (failures=2)
+
+--- Test Case 45 ---
+test_triangle_area (builtins.TestTriangleArea1.test_triangle_area) ... ok
+test_triangle_area (builtins.TestTriangleArea2.test_triangle_area) ... ok
+
+----------------------------------------------------------------------
+Ran 2 tests in 0.000s
+
+OK
+
+--- Test Case 83 ---
+test_starts_one_ends (builtins.TestStartsOneEnds1.test_starts_one_ends) ... FAIL
+test_starts_one_ends_edge_cases (builtins.TestStartsOneEnds2.test_starts_one_ends_edge_cases) ... ERROR
+
+======================================================================
+ERROR: test_starts_one_ends_edge_cases (builtins.TestStartsOneEnds2.test_starts_one_ends_edge_cases)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<string>", line 7, in test_starts_one_ends_edge_cases
+  File "<string>", line 3, in starts_one_ends
+TypeError: 'float' object cannot be interpreted as an integer
+
+======================================================================
+FAIL: test_starts_one_ends (builtins.TestStartsOneEnds1.test_starts_one_ends)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<string>", line 5, in test_starts_one_ends
+AssertionError: 1 != 2
+
+----------------------------------------------------------------------
+Ran 2 tests in 0.001s
+
+FAILED (failures=1, errors=1)
+
+--- Test Case 162 ---
+
+----------------------------------------------------------------------
+Ran 0 tests in 0.000s
+
+NO TESTS RAN
+
+--- Test Case 33 ---
+test_sort_third (builtins.TestSortThird1.test_sort_third) ... FAIL
+test_sort_third (builtins.TestSortThird2.test_sort_third) ... FAIL
+test_sort_third (builtins.TestSortThird3.test_sort_third) ... ok
+
+======================================================================
+FAIL: test_sort_third (builtins.TestSortThird1.test_sort_third)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<string>", line 8, in test_sort_third
+AssertionError: Lists differ: [1, 2, 3, 4, 5, 6, 7, 8, 9] != [1, 4, 2, 7, 3, 10, 5, 13, 6]
+
+First differing element 1:
+2
+4
+
+- [1, 2, 3, 4, 5, 6, 7, 8, 9]
++ [1, 4, 2, 7, 3, 10, 5, 13, 6]
+
+======================================================================
+FAIL: test_sort_third (builtins.TestSortThird2.test_sort_third)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<string>", line 10, in test_sort_third
+AssertionError: Lists differ: [10, 20, 30, 40, 50, 60, 70, 80, 90] != [10, 40, 20, 70, 30, 100, 50, 130, 60]
+
+First differing element 1:
+20
+40
+
+- [10, 20, 30, 40, 50, 60, 70, 80, 90]
++ [10, 40, 20, 70, 30, 100, 50, 130, 60]
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.001s
+
+FAILED (failures=2)
+
+--- Test Case 37 ---
+test_sort_even (builtins.TestSortEven1.test_sort_even) ... FAIL
+test_sort_even_empty (builtins.TestSortEven2.test_sort_even_empty) ... ok
+test_sort_even_single (builtins.TestSortEven3.test_sort_even_single) ... ok
+
+======================================================================
+FAIL: test_sort_even (builtins.TestSortEven1.test_sort_even)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<string>", line 4, in test_sort_even
+AssertionError: Lists differ: [5, 2, 7, 1, 9, 6] != [1, 5, 2, 9, 6, 7]
+
+First differing element 0:
+5
+1
+
+- [5, 2, 7, 1, 9, 6]
++ [1, 5, 2, 9, 6, 7]
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.000s
+
+FAILED (failures=1)
+
+--- Test Case 42 ---
+test_incr_list (builtins.TestIncrList.test_incr_list) ... ok
+test_incr_list_empty (builtins.TestIncrListEmpty.test_incr_list_empty) ... ok
+test_incr_list_negative (builtins.TestIncrListNegative.test_incr_list_negative) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.000s
+
+OK
+
+--- Test Case 53 ---
+test_add_negative_and_positive_numbers (builtins.TestAddMixedNumbers.test_add_negative_and_positive_numbers) ... ok
+test_add_positive_and_negative_numbers (builtins.TestAddMixedNumbers.test_add_positive_and_negative_numbers) ... ok
+test_add_one_negative_and_zero (builtins.TestAddNegativeNumbers.test_add_one_negative_and_zero) ... ok
+test_add_two_negative_numbers (builtins.TestAddNegativeNumbers.test_add_two_negative_numbers) ... ok
+test_add_one_positive_and_zero (builtins.TestAddPositiveNumbers.test_add_one_positive_and_zero) ... ok
+test_add_two_positive_numbers (builtins.TestAddPositiveNumbers.test_add_two_positive_numbers) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.000s
+
+OK
+
+--- Test Case 59 ---
+test_largest_prime_factor (builtins.TestLargestPrimeFactor1.test_largest_prime_factor) ... ok
+test_largest_prime_factor (builtins.TestLargestPrimeFactor2.test_largest_prime_factor) ... FAIL
+test_largest_prime_factor (builtins.TestLargestPrimeFactor3.test_largest_prime_factor) ... FAIL
+
+======================================================================
+FAIL: test_largest_prime_factor (builtins.TestLargestPrimeFactor2.test_largest_prime_factor)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<string>", line 8, in test_largest_prime_factor
+AssertionError: None != 17
+
+======================================================================
+FAIL: test_largest_prime_factor (builtins.TestLargestPrimeFactor3.test_largest_prime_factor)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<string>", line 7, in test_largest_prime_factor
+AssertionError: None != 2
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.365s
+
+FAILED (failures=2)
+
+--- Test Case 69 ---
+test_search (builtins.TestSearch1.test_search) ... FAIL
+test_search (builtins.TestSearch2.test_search) ... FAIL
+test_search (builtins.TestSearch3.test_search) ... ok
+
+======================================================================
+FAIL: test_search (builtins.TestSearch1.test_search)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<string>", line 5, in test_search
+AssertionError: 1 != 5
+
+======================================================================
+FAIL: test_search (builtins.TestSearch2.test_search)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<string>", line 7, in test_search
+AssertionError: -1 != 50
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.000s
+
+FAILED (failures=2)
+
+--- Test Case 90 ---
+test_next_smallest (builtins.TestNextSmallest1.test_next_smallest) ... ok
+test_next_smallest (builtins.TestNextSmallest2.test_next_smallest) ... ok
+test_next_smallest (builtins.TestNextSmallest3.test_next_smallest) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.000s
+
+OK
+
+--- Test Case 91 ---
+test_is_bored (builtins.TestIsBored1.test_is_bored) ... ok
+test_is_bored (builtins.TestIsBored2.test_is_bored) ... ok
+test_is_bored (builtins.TestIsBored3.test_is_bored) ... FAIL
+
+======================================================================
+FAIL: test_is_bored (builtins.TestIsBored3.test_is_bored)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<string>", line 7, in test_is_bored
+AssertionError: 1 != 0
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.000s
+
+FAILED (failures=1)
+
+--- Test Case 94 ---
+test_skjkasdkd (builtins.TestSkjkasdkd1.test_skjkasdkd) ... ok
+test_skjkasdkd (builtins.TestSkjkasdkd2.test_skjkasdkd) ... ok
+test_skjkasdkd (builtins.TestSkjkasdkd3.test_skjkasdkd) ... FAIL
+
+======================================================================
+FAIL: test_skjkasdkd (builtins.TestSkjkasdkd3.test_skjkasdkd)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<string>", line 6, in test_skjkasdkd
+AssertionError: 10 != 8
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.000s
+
+FAILED (failures=1)
+
+--- Test Case 97 ---
+test_multiply_mixed_numbers (builtins.TestMultiplyMixedNumbers.test_multiply_mixed_numbers) ... ok
+test_multiply_negative_numbers (builtins.TestMultiplyNegativeNumbers.test_multiply_negative_numbers) ... ok
+test_multiply_positive_numbers (builtins.TestMultiplyPositiveNumbers.test_multiply_positive_numbers) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.000s
+
+OK
+
+--- Test Case 40 ---
+test_triples_sum_to_zero (builtins.TestTriplesSumToOne.test_triples_sum_to_zero) ... ok
+test_triples_sum_to_zero_empty (builtins.TestTriplesSumToZeroEmpty.test_triples_sum_to_zero_empty) ... ok
+test_triples_sum_to_zero_negative (builtins.TestTriplesSumToZeroNegative.test_triples_sum_to_zero_negative) ... ok
+test_triples_sum_to_zero_positive (builtins.TestTriplesSumToZeroPositive.test_triples_sum_to_zero_positive) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.000s
+
+OK
+
+--- Test Case 44 ---
+
+----------------------------------------------------------------------
+Ran 0 tests in 0.000s
+
+NO TESTS RAN
+
+--- Test Case 48 ---
+test_is_palindrome_single_character (builtins.TestIsPalindrome1.test_is_palindrome_single_character) ... ok
+test_is_palindrome_even_length (builtins.TestIsPalindrome2.test_is_palindrome_even_length) ... ok
+test_is_palindrome_odd_length (builtins.TestIsPalindrome3.test_is_palindrome_odd_length) ... ok
+test_is_not_palindrome (builtins.TestIsPalindrome4.test_is_not_palindrome) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.000s
+
+OK
+
+--- Test Case 66 ---
+test_digitSum (builtins.TestDigitSum1.test_digitSum) ... ok
+test_digitSum (builtins.TestDigitSum2.test_digitSum) ... ok
+test_digitSum (builtins.TestDigitSum3.test_digitSum) ... ok
+test_digitSum (builtins.TestDigitSum4.test_digitSum) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.000s
+
+OK
+
+--- Test Case 67 ---
+test_fruit_distribution (builtins.TestFruitDistribution1.test_fruit_distribution) ... ok
+test_fruit_distribution (builtins.TestFruitDistribution2.test_fruit_distribution) ... ok
+test_fruit_distribution (builtins.TestFruitDistribution3.test_fruit_distribution) ... ok
+test_fruit_distribution (builtins.TestFruitDistribution4.test_fruit_distribution) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.000s
+
+OK
+
+--- Test Case 86 ---
+test_anti_shuffle (builtins.TestAntiShuffle1.test_anti_shuffle) ... FAIL
+test_anti_shuffle (builtins.TestAntiShuffle2.test_anti_shuffle) ... FAIL
+test_anti_shuffle (builtins.TestAntiShuffle3.test_anti_shuffle) ... FAIL
+test_anti_shuffle (builtins.TestAntiShuffle4.test_anti_shuffle) ... ok
+
+======================================================================
+FAIL: test_anti_shuffle (builtins.TestAntiShuffle1.test_anti_shuffle)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<string>", line 5, in test_anti_shuffle
+AssertionError: 'ehllo dlorw' != 'ehllo dlroW'
+- ehllo dlorw
+?          ^^
++ ehllo dlroW
+?         + ^
+
+
+======================================================================
+FAIL: test_anti_shuffle (builtins.TestAntiShuffle2.test_anti_shuffle)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<string>", line 7, in test_anti_shuffle
+AssertionError: 'eilnst eilnst' != 'eilnst elinsT'
+- eilnst eilnst
+?          -  ^
++ eilnst elinsT
+?         +   ^
+
+
+======================================================================
+FAIL: test_anti_shuffle (builtins.TestAntiShuffle3.test_anti_shuffle)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<string>", line 7, in test_anti_shuffle
+AssertionError: 'eilnst eilnst' != 'deilnst elinsT'
+- eilnst eilnst
+?          -  ^
++ deilnst elinsT
+? +        +   ^
+
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.001s
+
+FAILED (failures=3)
+
+--- Test Case 95 ---
+test_empty_dict (builtins.TestCheckDictCase1.test_empty_dict) ... ok
+test_all_lower (builtins.TestCheckDictCase2.test_all_lower) ... FAIL
+test_all_upper (builtins.TestCheckDictCase2.test_all_upper) ... FAIL
+test_mixed_case (builtins.TestCheckDictCase3.test_mixed_case) ... ok
+test_single_key (builtins.TestCheckDictCase4.test_single_key) ... FAIL
+
+======================================================================
+FAIL: test_all_lower (builtins.TestCheckDictCase2.test_all_lower)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<string>", line 7, in test_all_lower
+AssertionError: False is not true
+
+======================================================================
+FAIL: test_all_upper (builtins.TestCheckDictCase2.test_all_upper)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<string>", line 9, in test_all_upper
+AssertionError: False is not true
+
+======================================================================
+FAIL: test_single_key (builtins.TestCheckDictCase4.test_single_key)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<string>", line 7, in test_single_key
+AssertionError: False is not true
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.000s
+
+FAILED (failures=3)
+
+--- Test Case 107 ---
+test_even_odd_palindrome (builtins.TestEvenOddPalindrome1.test_even_odd_palindrome) ... FAIL
+test_even_odd_palindrome (builtins.TestEvenOddPalindrome2.test_even_odd_palindrome) ... FAIL
+test_even_odd_palindrome (builtins.TestEvenOddPalindrome3.test_even_odd_palindrome) ... FAIL
+test_even_odd_palindrome (builtins.TestEvenOddPalindrome4.test_even_odd_palindrome) ... ok
+
+======================================================================
+FAIL: test_even_odd_palindrome (builtins.TestEvenOddPalindrome1.test_even_odd_palindrome)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<string>", line 5, in test_even_odd_palindrome
+AssertionError: Tuples differ: (4, 5) != (2, 1)
+
+First differing element 0:
+4
+2
+
+- (4, 5)
++ (2, 1)
+
+======================================================================
+FAIL: test_even_odd_palindrome (builtins.TestEvenOddPalindrome2.test_even_odd_palindrome)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<string>", line 7, in test_even_odd_palindrome
+AssertionError: Tuples differ: (4, 6) != (4, 2)
+
+First differing element 1:
+6
+2
+
+- (4, 6)
+?     ^
+
++ (4, 2)
+?     ^
+
+
+======================================================================
+FAIL: test_even_odd_palindrome (builtins.TestEvenOddPalindrome3.test_even_odd_palindrome)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<string>", line 7, in test_even_odd_palindrome
+AssertionError: Tuples differ: (2, 3) != (1, 1)
+
+First differing element 0:
+2
+1
+
+- (2, 3)
++ (1, 1)
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.001s
+
+FAILED (failures=3)
+
+--- Test Case 109 ---
+test_empty_array (builtins.TestMoveOneBall1.test_empty_array) ... ok
+test_already_sorted_array (builtins.TestMoveOneBall2.test_already_sorted_array) ... ok
+test_rotated_sorted_array (builtins.TestMoveOneBall3.test_rotated_sorted_array) ... ok
+test_unsortable_array (builtins.TestMoveOneBall4.test_unsortable_array) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.000s
+
+OK
+
+--- Test Case 112 ---
+test_reverse_delete (builtins.TestReverseDelete1.test_reverse_delete) ... ok
+test_reverse_delete (builtins.TestReverseDelete2.test_reverse_delete) ... FAIL
+test_reverse_delete (builtins.TestReverseDelete3.test_reverse_delete) ... ok
+test_reverse_delete (builtins.TestReverseDelete4.test_reverse_delete) ... ok
+
+======================================================================
+FAIL: test_reverse_delete (builtins.TestReverseDelete2.test_reverse_delete)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<string>", line 7, in test_reverse_delete
+AssertionError: Tuples differ: ('ada', True) != ('a', True)
+
+First differing element 0:
+'ada'
+'a'
+
+- ('ada', True)
+?    --
+
++ ('a', True)
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.001s
+
+FAILED (failures=1)
+
+--- Test Case 128 ---
+test_prod_signs_empty_array (builtins.TestProdSigns1.test_prod_signs_empty_array) ... ok
+test_prod_signs_positive_numbers (builtins.TestProdSigns2.test_prod_signs_positive_numbers) ... ok
+test_prod_signs_negative_numbers (builtins.TestProdSigns3.test_prod_signs_negative_numbers) ... FAIL
+test_prod_signs_mixed_numbers (builtins.TestProdSigns4.test_prod_signs_mixed_numbers) ... FAIL
+
+======================================================================
+FAIL: test_prod_signs_negative_numbers (builtins.TestProdSigns3.test_prod_signs_negative_numbers)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<string>", line 7, in test_prod_signs_negative_numbers
+AssertionError: -15 != 0
+
+======================================================================
+FAIL: test_prod_signs_mixed_numbers (builtins.TestProdSigns4.test_prod_signs_mixed_numbers)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<string>", line 7, in test_prod_signs_mixed_numbers
+AssertionError: 15 != 0
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.001s
+
+FAILED (failures=2)
+
