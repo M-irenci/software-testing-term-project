@@ -7,6 +7,7 @@ from datasets import load_dataset
 
 def generate_content(system_prompt: str, user_prompt: str):
     chat_completion = client.chat.completions.create(
+        temperature=0.2,
         model="llama3-70b-8192",
         messages=[
             {
@@ -43,17 +44,18 @@ for test_count, difficulty in enumerate(chosen_test_prompts, 2):
         result_prompts = generate_content(*prompt)
 
         test_prompt = (
-            "You are a software testing engineer.",
+            "You should give test cases for the given functions by following the restrictions.",
             f"""Generate {test_count} different unit tests for the function below
-            Import only "unittest", do not import anthing else, import "unittest" before every test function;
-            put "*****" between the test functions, so that I can split them;
-            Give tests as seperate functions, not as a class;
-            Do not add anything else other than the imports and functions:
+            Give tests as seperate classess, not as functions;
+            Always import necessary libraries at the top of the each class, but dont import the function you are testing;
+            Do not add any additional text, neither on the top nor the bottom.
+            only put "*****" between the classes, so that I can split them, consider syntax and indentation for each split and make sure that the code is executable;
+            Do not add anything else other than the imports and classes:
 
             {result_prompts}
         """)
         result_tests = generate_content(*test_prompt)
-
+        print(result_tests)
         llama_outputs[index] = {
             "diff": difficulty,
             "result_prompts": result_prompts,
