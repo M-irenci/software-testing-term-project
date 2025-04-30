@@ -1,3 +1,8 @@
+### @ Authors
+### Stuudent Names: İsmail Can Karaağaç, Mahmutcan İrenci, Bahoz Yalçın
+### Student IDs: 150210010, 150210034, 150210008
+
+
 import os
 import json
 from groq import Groq
