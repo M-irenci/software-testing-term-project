@@ -25,9 +25,9 @@
   },
   "83": {
     "total": 5,
-    "passed": 2,
-    "failed": 3,
-    "success_ratio": 0.4
+    "passed": 4,
+    "failed": 1,
+    "success_ratio": 0.8
   },
   "162": {
     "total": 5,
@@ -49,9 +49,9 @@
   },
   "33": {
     "total": 5,
-    "passed": 4,
-    "failed": 1,
-    "success_ratio": 0.8
+    "passed": 5,
+    "failed": 0,
+    "success_ratio": 1.0
   },
   "37": {
     "total": 5,
@@ -151,9 +151,9 @@
   },
   "107": {
     "total": 5,
-    "passed": 4,
-    "failed": 1,
-    "success_ratio": 0.8
+    "passed": 5,
+    "failed": 0,
+    "success_ratio": 1.0
   },
   "109": {
     "total": 5,

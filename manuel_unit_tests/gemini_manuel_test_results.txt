@@ -1,3 +1,10 @@
+--- Test Case 32 ---
+
+Build error
+
+
+
+
 --- Test Case 34 ---
 test_all_duplicates (builtins.TestUnique.test_all_duplicates) ... ok
 test_all_unique (builtins.TestUnique.test_all_unique) ... ok
@@ -6,7 +13,7 @@ test_mixed_duplicates (builtins.TestUnique.test_mixed_duplicates) ... ok
 test_unsorted_input (builtins.TestUnique.test_unsorted_input) ... ok
 
 ----------------------------------------------------------------------
-Ran 5 tests in 0.003s
+Ran 5 tests in 0.001s
 
 OK
 
@@ -50,8 +57,8 @@ OK
 test_edge_case_two (builtins.TestStartsOneEnds.test_edge_case_two) ... FAIL
 test_large_digit (builtins.TestStartsOneEnds.test_large_digit) ... ok
 test_single_digit (builtins.TestStartsOneEnds.test_single_digit) ... ok
-test_three_digits (builtins.TestStartsOneEnds.test_three_digits) ... FAIL
-test_two_digits (builtins.TestStartsOneEnds.test_two_digits) ... FAIL
+test_three_digits (builtins.TestStartsOneEnds.test_three_digits) ... ok
+test_two_digits (builtins.TestStartsOneEnds.test_two_digits) ... ok
 
 ======================================================================
 FAIL: test_edge_case_two (builtins.TestStartsOneEnds.test_edge_case_two)
@@ -60,24 +67,10 @@ Traceback (most recent call last):
   File "<string>", line 17, in test_edge_case_two
 AssertionError: 0.18 != 0
 
-======================================================================
-FAIL: test_three_digits (builtins.TestStartsOneEnds.test_three_digits)
 ----------------------------------------------------------------------
-Traceback (most recent call last):
-  File "<string>", line 11, in test_three_digits
-AssertionError: 180 != 189
+Ran 5 tests in 0.001s
 
-======================================================================
-FAIL: test_two_digits (builtins.TestStartsOneEnds.test_two_digits)
-----------------------------------------------------------------------
-Traceback (most recent call last):
-  File "<string>", line 8, in test_two_digits
-AssertionError: 18 != 19
-
-----------------------------------------------------------------------
-Ran 5 tests in 0.005s
-
-FAILED (failures=3)
+FAILED (failures=1)
 
 --- Test Case 162 ---
 test_empty_string (builtins.TestStringToMd5.test_empty_string) ... ok
@@ -118,28 +111,14 @@ OK
 --- Test Case 33 ---
 test_all_index_div_3 (builtins.TestSortThird.test_all_index_div_3) ... ok
 test_empty_list (builtins.TestSortThird.test_empty_list) ... ok
-test_exact_index_div_3 (builtins.TestSortThird.test_exact_index_div_3) ... FAIL
+test_exact_index_div_3 (builtins.TestSortThird.test_exact_index_div_3) ... ok
 test_no_index_div_3 (builtins.TestSortThird.test_no_index_div_3) ... ok
 test_unsorted_div_3_indices (builtins.TestSortThird.test_unsorted_div_3_indices) ... ok
 
-======================================================================
-FAIL: test_exact_index_div_3 (builtins.TestSortThird.test_exact_index_div_3)
 ----------------------------------------------------------------------
-Traceback (most recent call last):
-  File "<string>", line 8, in test_exact_index_div_3
-AssertionError: Lists differ: [2, 1, 4, 3, 0, 5] != [3, 1, 4, 2, 0, 5]
+Ran 5 tests in 0.000s
 
-First differing element 0:
-2
-3
-
-- [2, 1, 4, 3, 0, 5]
-+ [3, 1, 4, 2, 0, 5]
-
-----------------------------------------------------------------------
-Ran 5 tests in 0.002s
-
-FAILED (failures=1)
+OK
 
 --- Test Case 37 ---
 test_all_even_sorted (builtins.TestSortEven.test_all_even_sorted) ... ok
@@ -197,7 +176,7 @@ test_example_two (builtins.TestSearch.test_example_two) ... ok
 test_no_valid_value (builtins.TestSearch.test_no_valid_value) ... ok
 
 ----------------------------------------------------------------------
-Ran 5 tests in 0.001s
+Ran 5 tests in 0.000s
 
 OK
 
@@ -233,7 +212,7 @@ test_example_case_three (builtins.TestSkjkasdkd.test_example_case_three) ... ok
 test_example_case_two (builtins.TestSkjkasdkd.test_example_case_two) ... ok
 
 ----------------------------------------------------------------------
-Ran 5 tests in 0.001s
+Ran 5 tests in 0.000s
 
 OK
 
@@ -273,7 +252,7 @@ Traceback (most recent call last):
 AssertionError: 2 != 72
 
 ----------------------------------------------------------------------
-Ran 5 tests in 0.002s
+Ran 5 tests in 0.001s
 
 FAILED (failures=4)
 
@@ -371,32 +350,14 @@ OK
 --- Test Case 107 ---
 test_example_one (builtins.TestEvenOddPalindrome.test_example_one) ... ok
 test_example_two (builtins.TestEvenOddPalindrome.test_example_two) ... ok
-test_full_range_check (builtins.TestEvenOddPalindrome.test_full_range_check) ... FAIL
+test_full_range_check (builtins.TestEvenOddPalindrome.test_full_range_check) ... ok
 test_single_digit (builtins.TestEvenOddPalindrome.test_single_digit) ... ok
 test_upper_bound (builtins.TestEvenOddPalindrome.test_upper_bound) ... ok
 
-======================================================================
-FAIL: test_full_range_check (builtins.TestEvenOddPalindrome.test_full_range_check)
 ----------------------------------------------------------------------
-Traceback (most recent call last):
-  File "<string>", line 14, in test_full_range_check
-AssertionError: Tuples differ: (4, 6) != (5, 6)
+Ran 5 tests in 0.000s
 
-First differing element 0:
-4
-5
-
-- (4, 6)
-?  ^
-
-+ (5, 6)
-?  ^
-
-
-----------------------------------------------------------------------
-Ran 5 tests in 0.001s
-
-FAILED (failures=1)
+OK
 
 --- Test Case 109 ---
 test_empty_array (builtins.TestMoveOneBall.test_empty_array) ... ok
@@ -418,7 +379,7 @@ test_full_palindrome_remains (builtins.TestReverseDelete.test_full_palindrome_re
 test_remove_all (builtins.TestReverseDelete.test_remove_all) ... ok
 
 ----------------------------------------------------------------------
-Ran 5 tests in 0.001s
+Ran 5 tests in 0.000s
 
 OK
 

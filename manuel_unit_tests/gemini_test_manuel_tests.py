@@ -17,7 +17,7 @@ with open("gemini/gemini_test_data.json", "r", encoding="utf-8") as file:
 
 test_results = {}
 success_ratios = {}
-for index, data in manuel_tests.items():
+for index, data in list(manuel_tests.items())[1:]:
     try:
         local_env = {}
         gemini_func = re.findall(r"```python(.*?)```", gemini_outputs[index]["result_prompts"], re.DOTALL)
@@ -45,7 +45,11 @@ for index, data in manuel_tests.items():
             "success_ratio": ratio
         }
 
-        print(f"Test case {index}: {total} tests run, {passed} passed, {failed} failed, success ratio: {ratio:.2f}")
+        if ratio < 1:
+            print(f"Test case {index}: {total} tests run, {passed} passed, {failed} failed, success ratio: {ratio:.2f}")
+            for block in code_blocks:
+                print(block)
+
 
     except Exception as e:
         success_ratios[index] = {
@@ -53,9 +57,9 @@ for index, data in manuel_tests.items():
             "success_ratio": 0.0
         }
 
-with open("manuel_unit_tests/manuel_test_results.txt", "w", encoding="utf-8") as file:
+with open("manuel_unit_tests/gemini_manuel_test_results.txt", "w", encoding="utf-8") as file:
     for idx, out in test_results.items():
         file.write(f"--- Test Case {idx} ---\n{out}\n")
 
-with open("manuel_unit_tests/manuel_success_ratios.json", "w", encoding="utf-8") as file:
+with open("manuel_unit_tests/gemini_manuel_success_ratios.json", "w", encoding="utf-8") as file:
     json.dump(success_ratios, file, ensure_ascii=False, indent=2)
