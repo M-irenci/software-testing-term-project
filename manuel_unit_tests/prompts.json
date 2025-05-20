@@ -27,7 +27,7 @@
   "83": {
     "diff": "easy",
     "prompt": "\ndef starts_one_ends(n):\n    \"\"\"\n    Given a positive integer n, return the count of the numbers of n-digit\n    positive integers that start or end with 1.\n    \"\"\"\n",
-    "tests": "import unittest\n\nclass TestStartsOneEnds(unittest.TestCase):\n    def test_single_digit(self):\n        self.assertEqual(starts_one_ends(1), 1)\n\n    def test_two_digits(self):\n        self.assertEqual(starts_one_ends(2), 19)\n\n    def test_three_digits(self):\n        self.assertEqual(starts_one_ends(3), 189)\n\n    def test_large_digit(self):\n        self.assertTrue(starts_one_ends(6) > 0)\n\n    def test_edge_case_two(self):\n        self.assertEqual(starts_one_ends(0), 0)"
+    "tests": "import unittest\n\nclass TestStartsOneEnds(unittest.TestCase):\n    def test_single_digit(self):\n        self.assertEqual(starts_one_ends(1), 1)\n\n    def test_two_digits(self):\n        self.assertEqual(starts_one_ends(2), 18)\n\n    def test_three_digits(self):\n        self.assertEqual(starts_one_ends(3), 180)\n\n    def test_large_digit(self):\n        self.assertTrue(starts_one_ends(6) > 0)\n\n    def test_edge_case_two(self):\n        self.assertEqual(starts_one_ends(0), 0)"
   },
   "162": {
     "diff": "easy",
@@ -47,7 +47,7 @@
   "33": {
     "diff": "moderate",
     "prompt": "\n\ndef sort_third(l: list):\n    \"\"\"This function takes a list l and returns a list l' such that\n    l' is identical to l in the indicies that are not divisible by three, while its values at the indicies that are divisible by three are equal\n    to the values of the corresponding indicies of l, but sorted.\n    >>> sort_third([1, 2, 3])\n    [1, 2, 3]\n    >>> sort_third([5, 6, 3, 4, 8, 9, 2])\n    [2, 6, 3, 4, 8, 9, 5]\n    \"\"\"\n",
-    "tests": "import unittest\n\nclass TestSortThird(unittest.TestCase):\n    def test_no_index_div_3(self):\n        self.assertEqual(sort_third([1, 2]), [1, 2])\n\n    def test_exact_index_div_3(self):\n        self.assertEqual(sort_third([3, 1, 4, 2, 0, 5]), [3, 1, 4, 2, 0, 5])\n\n    def test_unsorted_div_3_indices(self):\n        self.assertEqual(sort_third([5, 6, 3, 4, 8, 9, 2]), [2, 6, 3, 4, 8, 9, 5])\n\n    def test_all_index_div_3(self):\n        self.assertEqual(sort_third([9, 1, 2, 8, 3, 4, 7, 5, 6]), [7, 1, 2, 8, 3, 4, 9, 5, 6])\n\n    def test_empty_list(self):\n        self.assertEqual(sort_third([]), [])"
+    "tests": "import unittest\n\nclass TestSortThird(unittest.TestCase):\n    def test_no_index_div_3(self):\n        self.assertEqual(sort_third([1, 2]), [1, 2])\n\n    def test_exact_index_div_3(self):\n        self.assertEqual(sort_third([3, 1, 4, 2, 0, 5]), [2, 1, 4, 3, 0, 5])\n\n    def test_unsorted_div_3_indices(self):\n        self.assertEqual(sort_third([5, 6, 3, 4, 8, 9, 2]), [2, 6, 3, 4, 8, 9, 5])\n\n    def test_all_index_div_3(self):\n        self.assertEqual(sort_third([9, 1, 2, 8, 3, 4, 7, 5, 6]), [7, 1, 2, 8, 3, 4, 9, 5, 6])\n\n    def test_empty_list(self):\n        self.assertEqual(sort_third([]), [])"
   },
   "37": {
     "diff": "moderate",
@@ -132,7 +132,7 @@
   "107": {
     "diff": "hard",
     "prompt": "\ndef even_odd_palindrome(n):\n    \"\"\"\n    Given a positive integer n, return a tuple that has the number of even and odd\n    integer palindromes that fall within the range(1, n), inclusive.\n\n    Example 1:\n\n        Input: 3\n        Output: (1, 2)\n        Explanation:\n        Integer palindrome are 1, 2, 3. one of them is even, and two of them are odd.\n\n    Example 2:\n\n        Input: 12\n        Output: (4, 6)\n        Explanation:\n        Integer palindrome are 1, 2, 3, 4, 5, 6, 7, 8, 9, 11. four of them are even, and 6 of them are odd.\n\n    Note:\n        1. 1 <= n <= 10^3\n        2. returned tuple has the number of even and odd integer palindromes respectively.\n    \"\"\"\n",
-    "tests": "import unittest\n\nclass TestEvenOddPalindrome(unittest.TestCase):\n    def test_example_one(self):\n        self.assertEqual(even_odd_palindrome(3), (1, 2))\n\n    def test_example_two(self):\n        self.assertEqual(even_odd_palindrome(12), (4, 6))\n\n    def test_single_digit(self):\n        self.assertEqual(even_odd_palindrome(1), (0, 1))\n\n    def test_full_range_check(self):\n        self.assertEqual(even_odd_palindrome(20), (5, 6))\n\n    def test_upper_bound(self):\n        result = even_odd_palindrome(1000)\n        self.assertIsInstance(result, tuple)\n        self.assertEqual(len(result), 2)"
+    "tests": "import unittest\n\nclass TestEvenOddPalindrome(unittest.TestCase):\n    def test_example_one(self):\n        self.assertEqual(even_odd_palindrome(3), (1, 2))\n\n    def test_example_two(self):\n        self.assertEqual(even_odd_palindrome(12), (4, 6))\n\n    def test_single_digit(self):\n        self.assertEqual(even_odd_palindrome(1), (0, 1))\n\n    def test_full_range_check(self):\n        self.assertEqual(even_odd_palindrome(20), (4, 6))\n\n    def test_upper_bound(self):\n        result = even_odd_palindrome(1000)\n        self.assertIsInstance(result, tuple)\n        self.assertEqual(len(result), 2)"
   },
   "109": {
     "diff": "hard",
