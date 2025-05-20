@@ -1,0 +1,436 @@
+--- Test Case 34 ---
+test_all_duplicates (builtins.TestUnique.test_all_duplicates) ... ok
+test_all_unique (builtins.TestUnique.test_all_unique) ... ok
+test_empty_list (builtins.TestUnique.test_empty_list) ... ok
+test_mixed_duplicates (builtins.TestUnique.test_mixed_duplicates) ... ok
+test_unsorted_input (builtins.TestUnique.test_unsorted_input) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.003s
+
+OK
+
+--- Test Case 38 ---
+test_empty_string (builtins.TestCyclicEncoding.test_empty_string) ... ok
+test_full_groups (builtins.TestCyclicEncoding.test_full_groups) ... ok
+test_partial_group_end (builtins.TestCyclicEncoding.test_partial_group_end) ... ok
+test_single_character_string (builtins.TestCyclicEncoding.test_single_character_string) ... ok
+test_two_character_string (builtins.TestCyclicEncoding.test_two_character_string) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.000s
+
+OK
+
+--- Test Case 45 ---
+test_float_inputs (builtins.TestTriangleArea.test_float_inputs) ... ok
+test_integer_inputs (builtins.TestTriangleArea.test_integer_inputs) ... ok
+test_large_values (builtins.TestTriangleArea.test_large_values) ... ok
+test_zero_base (builtins.TestTriangleArea.test_zero_base) ... ok
+test_zero_height (builtins.TestTriangleArea.test_zero_height) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.000s
+
+OK
+
+--- Test Case 50 ---
+test_basic_shift (builtins.TestShiftEncoding.test_basic_shift) ... ok
+test_empty_string (builtins.TestShiftEncoding.test_empty_string) ... ok
+test_mixed_string (builtins.TestShiftEncoding.test_mixed_string) ... ok
+test_repeated_characters (builtins.TestShiftEncoding.test_repeated_characters) ... ok
+test_wraparound_shift (builtins.TestShiftEncoding.test_wraparound_shift) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.000s
+
+OK
+
+--- Test Case 83 ---
+test_edge_case_two (builtins.TestStartsOneEnds.test_edge_case_two) ... FAIL
+test_large_digit (builtins.TestStartsOneEnds.test_large_digit) ... ok
+test_single_digit (builtins.TestStartsOneEnds.test_single_digit) ... ok
+test_three_digits (builtins.TestStartsOneEnds.test_three_digits) ... FAIL
+test_two_digits (builtins.TestStartsOneEnds.test_two_digits) ... FAIL
+
+======================================================================
+FAIL: test_edge_case_two (builtins.TestStartsOneEnds.test_edge_case_two)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<string>", line 17, in test_edge_case_two
+AssertionError: 0.18 != 0
+
+======================================================================
+FAIL: test_three_digits (builtins.TestStartsOneEnds.test_three_digits)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<string>", line 11, in test_three_digits
+AssertionError: 180 != 189
+
+======================================================================
+FAIL: test_two_digits (builtins.TestStartsOneEnds.test_two_digits)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<string>", line 8, in test_two_digits
+AssertionError: 18 != 19
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.005s
+
+FAILED (failures=3)
+
+--- Test Case 162 ---
+test_empty_string (builtins.TestStringToMd5.test_empty_string) ... ok
+test_hello_world (builtins.TestStringToMd5.test_hello_world) ... ok
+test_long_string (builtins.TestStringToMd5.test_long_string) ... ok
+test_numeric_string (builtins.TestStringToMd5.test_numeric_string) ... ok
+test_special_characters (builtins.TestStringToMd5.test_special_characters) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.000s
+
+OK
+
+--- Test Case 28 ---
+test_empty_list (builtins.TestConcatenate.test_empty_list) ... ok
+test_mixed_strings (builtins.TestConcatenate.test_mixed_strings) ... ok
+test_multiple_strings (builtins.TestConcatenate.test_multiple_strings) ... ok
+test_single_element (builtins.TestConcatenate.test_single_element) ... ok
+test_whitespace_strings (builtins.TestConcatenate.test_whitespace_strings) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.000s
+
+OK
+
+--- Test Case 29 ---
+test_all_match (builtins.TestFilterByPrefix.test_all_match) ... ok
+test_case_sensitive (builtins.TestFilterByPrefix.test_case_sensitive) ... ok
+test_empty_list (builtins.TestFilterByPrefix.test_empty_list) ... ok
+test_no_matches (builtins.TestFilterByPrefix.test_no_matches) ... ok
+test_some_matches (builtins.TestFilterByPrefix.test_some_matches) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.000s
+
+OK
+
+--- Test Case 33 ---
+test_all_index_div_3 (builtins.TestSortThird.test_all_index_div_3) ... ok
+test_empty_list (builtins.TestSortThird.test_empty_list) ... ok
+test_exact_index_div_3 (builtins.TestSortThird.test_exact_index_div_3) ... FAIL
+test_no_index_div_3 (builtins.TestSortThird.test_no_index_div_3) ... ok
+test_unsorted_div_3_indices (builtins.TestSortThird.test_unsorted_div_3_indices) ... ok
+
+======================================================================
+FAIL: test_exact_index_div_3 (builtins.TestSortThird.test_exact_index_div_3)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<string>", line 8, in test_exact_index_div_3
+AssertionError: Lists differ: [2, 1, 4, 3, 0, 5] != [3, 1, 4, 2, 0, 5]
+
+First differing element 0:
+2
+3
+
+- [2, 1, 4, 3, 0, 5]
++ [3, 1, 4, 2, 0, 5]
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.002s
+
+FAILED (failures=1)
+
+--- Test Case 37 ---
+test_all_even_sorted (builtins.TestSortEven.test_all_even_sorted) ... ok
+test_basic_case (builtins.TestSortEven.test_basic_case) ... ok
+test_empty_list (builtins.TestSortEven.test_empty_list) ... ok
+test_no_even_index (builtins.TestSortEven.test_no_even_index) ... ok
+test_only_even_indices (builtins.TestSortEven.test_only_even_indices) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.000s
+
+OK
+
+--- Test Case 42 ---
+test_all_zeros (builtins.TestIncrList.test_all_zeros) ... ok
+test_empty_list (builtins.TestIncrList.test_empty_list) ... ok
+test_large_numbers (builtins.TestIncrList.test_large_numbers) ... ok
+test_mixed_numbers (builtins.TestIncrList.test_mixed_numbers) ... ok
+test_positive_numbers (builtins.TestIncrList.test_positive_numbers) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.000s
+
+OK
+
+--- Test Case 53 ---
+test_large_numbers (builtins.TestAdd.test_large_numbers) ... ok
+test_mixed_sign_numbers (builtins.TestAdd.test_mixed_sign_numbers) ... ok
+test_negative_numbers (builtins.TestAdd.test_negative_numbers) ... ok
+test_positive_numbers (builtins.TestAdd.test_positive_numbers) ... ok
+test_zero_addition (builtins.TestAdd.test_zero_addition) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.000s
+
+OK
+
+--- Test Case 59 ---
+test_composite_with_large_prime (builtins.TestLargestPrimeFactor.test_composite_with_large_prime) ... ok
+test_example_case (builtins.TestLargestPrimeFactor.test_example_case) ... ok
+test_multiple_small_factors (builtins.TestLargestPrimeFactor.test_multiple_small_factors) ... ok
+test_power_of_two (builtins.TestLargestPrimeFactor.test_power_of_two) ... ok
+test_small_composite (builtins.TestLargestPrimeFactor.test_small_composite) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.000s
+
+OK
+
+--- Test Case 69 ---
+test_all_same_values (builtins.TestSearch.test_all_same_values) ... ok
+test_example_one (builtins.TestSearch.test_example_one) ... ok
+test_example_three (builtins.TestSearch.test_example_three) ... ok
+test_example_two (builtins.TestSearch.test_example_two) ... ok
+test_no_valid_value (builtins.TestSearch.test_no_valid_value) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.001s
+
+OK
+
+--- Test Case 90 ---
+test_empty_list (builtins.TestNextSmallest.test_empty_list) ... ok
+test_same_elements (builtins.TestNextSmallest.test_same_elements) ... ok
+test_sorted_list (builtins.TestNextSmallest.test_sorted_list) ... ok
+test_unsorted_list (builtins.TestNextSmallest.test_unsorted_list) ... ok
+test_with_negatives (builtins.TestNextSmallest.test_with_negatives) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.000s
+
+OK
+
+--- Test Case 91 ---
+test_irregular_spacing (builtins.TestIsBored.test_irregular_spacing) ... ok
+test_lowercase_i (builtins.TestIsBored.test_lowercase_i) ... ok
+test_multiple_boredoms (builtins.TestIsBored.test_multiple_boredoms) ... ok
+test_no_boredom (builtins.TestIsBored.test_no_boredom) ... ok
+test_single_boredom (builtins.TestIsBored.test_single_boredom) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.000s
+
+OK
+
+--- Test Case 94 ---
+test_example_case_five (builtins.TestSkjkasdkd.test_example_case_five) ... ok
+test_example_case_four (builtins.TestSkjkasdkd.test_example_case_four) ... ok
+test_example_case_one (builtins.TestSkjkasdkd.test_example_case_one) ... ok
+test_example_case_three (builtins.TestSkjkasdkd.test_example_case_three) ... ok
+test_example_case_two (builtins.TestSkjkasdkd.test_example_case_two) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.001s
+
+OK
+
+--- Test Case 97 ---
+test_both_negative (builtins.TestMultiply.test_both_negative) ... FAIL
+test_negative_number (builtins.TestMultiply.test_negative_number) ... FAIL
+test_positive_digits (builtins.TestMultiply.test_positive_digits) ... FAIL
+test_single_digits (builtins.TestMultiply.test_single_digits) ... FAIL
+test_zero_unit_digit (builtins.TestMultiply.test_zero_unit_digit) ... ok
+
+======================================================================
+FAIL: test_both_negative (builtins.TestMultiply.test_both_negative)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<string>", line 17, in test_both_negative
+AssertionError: 2 != 12
+
+======================================================================
+FAIL: test_negative_number (builtins.TestMultiply.test_negative_number)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<string>", line 14, in test_negative_number
+AssertionError: 0 != 20
+
+======================================================================
+FAIL: test_positive_digits (builtins.TestMultiply.test_positive_digits)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<string>", line 5, in test_positive_digits
+AssertionError: 6 != 16
+
+======================================================================
+FAIL: test_single_digits (builtins.TestMultiply.test_single_digits)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<string>", line 8, in test_single_digits
+AssertionError: 2 != 72
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.002s
+
+FAILED (failures=4)
+
+--- Test Case 40 ---
+test_all_positive (builtins.TestTriplesSumToZero.test_all_positive) ... ok
+test_no_zero_sum_triplet (builtins.TestTriplesSumToZero.test_no_zero_sum_triplet) ... ok
+test_too_few_elements (builtins.TestTriplesSumToZero.test_too_few_elements) ... ok
+test_valid_negative_triplet (builtins.TestTriplesSumToZero.test_valid_negative_triplet) ... ok
+test_valid_triplet_exists (builtins.TestTriplesSumToZero.test_valid_triplet_exists) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.000s
+
+OK
+
+--- Test Case 44 ---
+test_base_three (builtins.TestChangeBase.test_base_three) ... ok
+test_base_two (builtins.TestChangeBase.test_base_two) ... ok
+test_base_two_seven (builtins.TestChangeBase.test_base_two_seven) ... ok
+test_large_number (builtins.TestChangeBase.test_large_number) ... ok
+test_zero_value (builtins.TestChangeBase.test_zero_value) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.000s
+
+OK
+
+--- Test Case 48 ---
+test_case_sensitivity (builtins.TestIsPalindrome.test_case_sensitivity) ... FAIL
+test_empty_string (builtins.TestIsPalindrome.test_empty_string) ... ok
+test_non_palindrome (builtins.TestIsPalindrome.test_non_palindrome) ... ok
+test_repeating_characters (builtins.TestIsPalindrome.test_repeating_characters) ... ok
+test_simple_palindrome (builtins.TestIsPalindrome.test_simple_palindrome) ... ok
+
+======================================================================
+FAIL: test_case_sensitivity (builtins.TestIsPalindrome.test_case_sensitivity)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<string>", line 17, in test_case_sensitivity
+AssertionError: True is not false
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.001s
+
+FAILED (failures=1)
+
+--- Test Case 66 ---
+test_empty_string (builtins.TestDigitSum.test_empty_string) ... ok
+test_ending_uppercase (builtins.TestDigitSum.test_ending_uppercase) ... ok
+test_mixed_case (builtins.TestDigitSum.test_mixed_case) ... ok
+test_multiple_uppercase (builtins.TestDigitSum.test_multiple_uppercase) ... ok
+test_single_uppercase (builtins.TestDigitSum.test_single_uppercase) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.000s
+
+OK
+
+--- Test Case 67 ---
+test_example_four (builtins.TestFruitDistribution.test_example_four) ... ok
+test_example_one (builtins.TestFruitDistribution.test_example_one) ... ok
+test_example_three (builtins.TestFruitDistribution.test_example_three) ... ok
+test_example_two (builtins.TestFruitDistribution.test_example_two) ... ok
+test_zero_total (builtins.TestFruitDistribution.test_zero_total) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.000s
+
+OK
+
+--- Test Case 86 ---
+test_empty_string (builtins.TestAntiShuffle.test_empty_string) ... ok
+test_multiple_words (builtins.TestAntiShuffle.test_multiple_words) ... ok
+test_single_uppercase_word (builtins.TestAntiShuffle.test_single_uppercase_word) ... ok
+test_single_word (builtins.TestAntiShuffle.test_single_word) ... ok
+test_with_special_characters (builtins.TestAntiShuffle.test_with_special_characters) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.000s
+
+OK
+
+--- Test Case 95 ---
+test_all_lowercase_keys (builtins.TestCheckDictCase.test_all_lowercase_keys) ... ok
+test_all_uppercase_keys (builtins.TestCheckDictCase.test_all_uppercase_keys) ... ok
+test_mixed_case_keys (builtins.TestCheckDictCase.test_mixed_case_keys) ... ok
+test_non_string_key (builtins.TestCheckDictCase.test_non_string_key) ... ok
+test_title_case_keys (builtins.TestCheckDictCase.test_title_case_keys) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.000s
+
+OK
+
+--- Test Case 107 ---
+test_example_one (builtins.TestEvenOddPalindrome.test_example_one) ... ok
+test_example_two (builtins.TestEvenOddPalindrome.test_example_two) ... ok
+test_full_range_check (builtins.TestEvenOddPalindrome.test_full_range_check) ... FAIL
+test_single_digit (builtins.TestEvenOddPalindrome.test_single_digit) ... ok
+test_upper_bound (builtins.TestEvenOddPalindrome.test_upper_bound) ... ok
+
+======================================================================
+FAIL: test_full_range_check (builtins.TestEvenOddPalindrome.test_full_range_check)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<string>", line 14, in test_full_range_check
+AssertionError: Tuples differ: (4, 6) != (5, 6)
+
+First differing element 0:
+4
+5
+
+- (4, 6)
+?  ^
+
++ (5, 6)
+?  ^
+
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.001s
+
+FAILED (failures=1)
+
+--- Test Case 109 ---
+test_empty_array (builtins.TestMoveOneBall.test_empty_array) ... ok
+test_invalid_shift (builtins.TestMoveOneBall.test_invalid_shift) ... ok
+test_single_element (builtins.TestMoveOneBall.test_single_element) ... ok
+test_sorted_array (builtins.TestMoveOneBall.test_sorted_array) ... ok
+test_valid_shift (builtins.TestMoveOneBall.test_valid_shift) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.000s
+
+OK
+
+--- Test Case 112 ---
+test_example_one (builtins.TestReverseDelete.test_example_one) ... ok
+test_example_three (builtins.TestReverseDelete.test_example_three) ... ok
+test_example_two (builtins.TestReverseDelete.test_example_two) ... ok
+test_full_palindrome_remains (builtins.TestReverseDelete.test_full_palindrome_remains) ... ok
+test_remove_all (builtins.TestReverseDelete.test_remove_all) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.001s
+
+OK
+
+--- Test Case 128 ---
+test_all_negative (builtins.TestProdSigns.test_all_negative) ... ok
+test_all_positive (builtins.TestProdSigns.test_all_positive) ... ok
+test_empty_list (builtins.TestProdSigns.test_empty_list) ... ok
+test_mixed_numbers (builtins.TestProdSigns.test_mixed_numbers) ... ok
+test_with_zero (builtins.TestProdSigns.test_with_zero) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.000s
+
+OK
+
