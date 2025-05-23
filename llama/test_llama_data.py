@@ -9,7 +9,7 @@ import unittest
 import io
 from contextlib import redirect_stdout, redirect_stderr
 
-with open("llama_test_data.json", "r", encoding="utf-8") as file:
+with open("llama/llama_test_data.json", "r", encoding="utf-8") as file:
     llama_outputs: dict[int, dict[str, str]] = json.load(file)
 
 test_results = {}

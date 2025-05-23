@@ -9,7 +9,7 @@ import unittest
 import io
 from contextlib import redirect_stdout, redirect_stderr
 
-with open("manuel_unit_tests/prompts.json", "r", encoding="utf-8") as file:
+with open("manuel_unit_tests/prompts_llama.json", "r", encoding="utf-8") as file:
     manuel_tests: dict[int, dict[str, str]] = json.load(file)
 
 with open("llama/llama_test_data.json", "r", encoding="utf-8") as file:

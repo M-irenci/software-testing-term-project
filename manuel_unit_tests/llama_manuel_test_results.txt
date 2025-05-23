@@ -1,90 +1,3 @@
---- Test Case 32 ---
-test_cubic_zero (builtins.TestFindZero.test_cubic_zero) ... ERROR
-test_large_coefficients (builtins.TestFindZero.test_large_coefficients) ... ERROR
-test_linear_zero (builtins.TestFindZero.test_linear_zero) ... ERROR
-test_negative_root (builtins.TestFindZero.test_negative_root) ... ERROR
-test_zero_at_origin (builtins.TestFindZero.test_zero_at_origin) ... ERROR
-
-======================================================================
-ERROR: test_cubic_zero (builtins.TestFindZero.test_cubic_zero)
-----------------------------------------------------------------------
-Traceback (most recent call last):
-  File "<string>", line 9, in test_cubic_zero
-  File "<string>", line 6, in find_zero
-  File "c:\Users\Mahmutcan\anaconda3\Lib\site-packages\scipy\optimize\_zeros_py.py", line 806, in brentq
-    r = _zeros._brentq(f, a, b, xtol, rtol, maxiter, args, full_output, disp)
-        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "c:\Users\Mahmutcan\anaconda3\Lib\site-packages\scipy\optimize\_zeros_py.py", line 94, in f_raise
-    fx = f(x, *args)
-         ^^^^^^^^^^^
-  File "<string>", line 5, in f
-NameError: name 'poly' is not defined
-
-======================================================================
-ERROR: test_large_coefficients (builtins.TestFindZero.test_large_coefficients)
-----------------------------------------------------------------------
-Traceback (most recent call last):
-  File "<string>", line 18, in test_large_coefficients
-  File "<string>", line 6, in find_zero
-  File "c:\Users\Mahmutcan\anaconda3\Lib\site-packages\scipy\optimize\_zeros_py.py", line 806, in brentq
-    r = _zeros._brentq(f, a, b, xtol, rtol, maxiter, args, full_output, disp)
-        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "c:\Users\Mahmutcan\anaconda3\Lib\site-packages\scipy\optimize\_zeros_py.py", line 94, in f_raise
-    fx = f(x, *args)
-         ^^^^^^^^^^^
-  File "<string>", line 5, in f
-NameError: name 'poly' is not defined
-
-======================================================================
-ERROR: test_linear_zero (builtins.TestFindZero.test_linear_zero)
-----------------------------------------------------------------------
-Traceback (most recent call last):
-  File "<string>", line 6, in test_linear_zero
-  File "<string>", line 6, in find_zero
-  File "c:\Users\Mahmutcan\anaconda3\Lib\site-packages\scipy\optimize\_zeros_py.py", line 806, in brentq
-    r = _zeros._brentq(f, a, b, xtol, rtol, maxiter, args, full_output, disp)
-        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "c:\Users\Mahmutcan\anaconda3\Lib\site-packages\scipy\optimize\_zeros_py.py", line 94, in f_raise
-    fx = f(x, *args)
-         ^^^^^^^^^^^
-  File "<string>", line 5, in f
-NameError: name 'poly' is not defined
-
-======================================================================
-ERROR: test_negative_root (builtins.TestFindZero.test_negative_root)
-----------------------------------------------------------------------
-Traceback (most recent call last):
-  File "<string>", line 15, in test_negative_root
-  File "<string>", line 6, in find_zero
-  File "c:\Users\Mahmutcan\anaconda3\Lib\site-packages\scipy\optimize\_zeros_py.py", line 806, in brentq
-    r = _zeros._brentq(f, a, b, xtol, rtol, maxiter, args, full_output, disp)
-        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "c:\Users\Mahmutcan\anaconda3\Lib\site-packages\scipy\optimize\_zeros_py.py", line 94, in f_raise
-    fx = f(x, *args)
-         ^^^^^^^^^^^
-  File "<string>", line 5, in f
-NameError: name 'poly' is not defined
-
-======================================================================
-ERROR: test_zero_at_origin (builtins.TestFindZero.test_zero_at_origin)
-----------------------------------------------------------------------
-Traceback (most recent call last):
-  File "<string>", line 12, in test_zero_at_origin
-  File "<string>", line 6, in find_zero
-  File "c:\Users\Mahmutcan\anaconda3\Lib\site-packages\scipy\optimize\_zeros_py.py", line 806, in brentq
-    r = _zeros._brentq(f, a, b, xtol, rtol, maxiter, args, full_output, disp)
-        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "c:\Users\Mahmutcan\anaconda3\Lib\site-packages\scipy\optimize\_zeros_py.py", line 94, in f_raise
-    fx = f(x, *args)
-         ^^^^^^^^^^^
-  File "<string>", line 5, in f
-NameError: name 'poly' is not defined
-
-----------------------------------------------------------------------
-Ran 5 tests in 0.006s
-
-FAILED (errors=5)
-
 --- Test Case 34 ---
 test_all_duplicates (builtins.TestUnique.test_all_duplicates) ... ok
 test_all_unique (builtins.TestUnique.test_all_unique) ... ok
@@ -96,53 +9,6 @@ test_unsorted_input (builtins.TestUnique.test_unsorted_input) ... ok
 Ran 5 tests in 0.000s
 
 OK
-
---- Test Case 38 ---
-test_empty_string (builtins.TestCyclicEncoding.test_empty_string) ... ERROR
-test_full_groups (builtins.TestCyclicEncoding.test_full_groups) ... ERROR
-test_partial_group_end (builtins.TestCyclicEncoding.test_partial_group_end) ... ERROR
-test_single_character_string (builtins.TestCyclicEncoding.test_single_character_string) ... ERROR
-test_two_character_string (builtins.TestCyclicEncoding.test_two_character_string) ... ERROR
-
-======================================================================
-ERROR: test_empty_string (builtins.TestCyclicEncoding.test_empty_string)
-----------------------------------------------------------------------
-Traceback (most recent call last):
-  File "<string>", line 17, in test_empty_string
-NameError: name 'encode_cyclic' is not defined. Did you mean: 'decode_cyclic'?
-
-======================================================================
-ERROR: test_full_groups (builtins.TestCyclicEncoding.test_full_groups)
-----------------------------------------------------------------------
-Traceback (most recent call last):
-  File "<string>", line 5, in test_full_groups
-NameError: name 'encode_cyclic' is not defined. Did you mean: 'decode_cyclic'?
-
-======================================================================
-ERROR: test_partial_group_end (builtins.TestCyclicEncoding.test_partial_group_end)
-----------------------------------------------------------------------
-Traceback (most recent call last):
-  File "<string>", line 8, in test_partial_group_end
-NameError: name 'encode_cyclic' is not defined. Did you mean: 'decode_cyclic'?
-
-======================================================================
-ERROR: test_single_character_string (builtins.TestCyclicEncoding.test_single_character_string)
-----------------------------------------------------------------------
-Traceback (most recent call last):
-  File "<string>", line 14, in test_single_character_string
-NameError: name 'encode_cyclic' is not defined. Did you mean: 'decode_cyclic'?
-
-======================================================================
-ERROR: test_two_character_string (builtins.TestCyclicEncoding.test_two_character_string)
-----------------------------------------------------------------------
-Traceback (most recent call last):
-  File "<string>", line 11, in test_two_character_string
-NameError: name 'encode_cyclic' is not defined. Did you mean: 'decode_cyclic'?
-
-----------------------------------------------------------------------
-Ran 5 tests in 0.002s
-
-FAILED (errors=5)
 
 --- Test Case 45 ---
 test_float_inputs (builtins.TestTriangleArea.test_float_inputs) ... ok
@@ -157,24 +23,16 @@ Ran 5 tests in 0.000s
 OK
 
 --- Test Case 83 ---
-test_edge_case_two (builtins.TestStartsOneEnds.test_edge_case_two) ... ERROR
+test_edge_case_two (builtins.TestStartsOneEnds.test_edge_case_two) ... ok
 test_large_digit (builtins.TestStartsOneEnds.test_large_digit) ... ok
 test_single_digit (builtins.TestStartsOneEnds.test_single_digit) ... ok
 test_three_digits (builtins.TestStartsOneEnds.test_three_digits) ... ok
 test_two_digits (builtins.TestStartsOneEnds.test_two_digits) ... ok
 
-======================================================================
-ERROR: test_edge_case_two (builtins.TestStartsOneEnds.test_edge_case_two)
 ----------------------------------------------------------------------
-Traceback (most recent call last):
-  File "<string>", line 17, in test_edge_case_two
-  File "<string>", line 3, in starts_one_ends
-TypeError: 'float' object cannot be interpreted as an integer
+Ran 5 tests in 0.094s
 
-----------------------------------------------------------------------
-Ran 5 tests in 0.140s
-
-FAILED (errors=1)
+OK
 
 --- Test Case 162 ---
 test_empty_string (builtins.TestStringToMd5.test_empty_string) ... ok
@@ -236,36 +94,12 @@ Ran 5 tests in 0.000s
 
 OK
 
---- Test Case 59 ---
-test_composite_with_large_prime (builtins.TestLargestPrimeFactor.test_composite_with_large_prime) ... ok
-test_example_case (builtins.TestLargestPrimeFactor.test_example_case) ... ok
-test_multiple_small_factors (builtins.TestLargestPrimeFactor.test_multiple_small_factors) ... ok
-test_power_of_two (builtins.TestLargestPrimeFactor.test_power_of_two) ... ok
-test_small_composite (builtins.TestLargestPrimeFactor.test_small_composite) ... ok
-
-----------------------------------------------------------------------
-Ran 5 tests in 0.001s
-
-OK
-
 --- Test Case 69 ---
 test_all_same_values (builtins.TestSearch.test_all_same_values) ... ok
 test_example_one (builtins.TestSearch.test_example_one) ... ok
 test_example_three (builtins.TestSearch.test_example_three) ... ok
 test_example_two (builtins.TestSearch.test_example_two) ... ok
 test_no_valid_value (builtins.TestSearch.test_no_valid_value) ... ok
-
-----------------------------------------------------------------------
-Ran 5 tests in 0.000s
-
-OK
-
---- Test Case 90 ---
-test_empty_list (builtins.TestNextSmallest.test_empty_list) ... ok
-test_same_elements (builtins.TestNextSmallest.test_same_elements) ... ok
-test_sorted_list (builtins.TestNextSmallest.test_sorted_list) ... ok
-test_unsorted_list (builtins.TestNextSmallest.test_unsorted_list) ... ok
-test_with_negatives (builtins.TestNextSmallest.test_with_negatives) ... ok
 
 ----------------------------------------------------------------------
 Ran 5 tests in 0.000s
@@ -297,44 +131,16 @@ Ran 5 tests in 0.000s
 OK
 
 --- Test Case 97 ---
-test_both_negative (builtins.TestMultiply.test_both_negative) ... FAIL
-test_negative_number (builtins.TestMultiply.test_negative_number) ... FAIL
-test_positive_digits (builtins.TestMultiply.test_positive_digits) ... FAIL
-test_single_digits (builtins.TestMultiply.test_single_digits) ... FAIL
+test_both_negative (builtins.TestMultiply.test_both_negative) ... ok
+test_negative_number (builtins.TestMultiply.test_negative_number) ... ok
+test_positive_digits (builtins.TestMultiply.test_positive_digits) ... ok
+test_single_digits (builtins.TestMultiply.test_single_digits) ... ok
 test_zero_unit_digit (builtins.TestMultiply.test_zero_unit_digit) ... ok
 
-======================================================================
-FAIL: test_both_negative (builtins.TestMultiply.test_both_negative)
 ----------------------------------------------------------------------
-Traceback (most recent call last):
-  File "<string>", line 17, in test_both_negative
-AssertionError: 2 != 12
+Ran 5 tests in 0.000s
 
-======================================================================
-FAIL: test_negative_number (builtins.TestMultiply.test_negative_number)
-----------------------------------------------------------------------
-Traceback (most recent call last):
-  File "<string>", line 14, in test_negative_number
-AssertionError: 0 != 20
-
-======================================================================
-FAIL: test_positive_digits (builtins.TestMultiply.test_positive_digits)
-----------------------------------------------------------------------
-Traceback (most recent call last):
-  File "<string>", line 5, in test_positive_digits
-AssertionError: 6 != 16
-
-======================================================================
-FAIL: test_single_digits (builtins.TestMultiply.test_single_digits)
-----------------------------------------------------------------------
-Traceback (most recent call last):
-  File "<string>", line 8, in test_single_digits
-AssertionError: 2 != 72
-
-----------------------------------------------------------------------
-Ran 5 tests in 0.001s
-
-FAILED (failures=4)
+OK
 
 --- Test Case 40 ---
 test_all_positive (builtins.TestTriplesSumToZero.test_all_positive) ... ok
@@ -342,18 +148,6 @@ test_no_zero_sum_triplet (builtins.TestTriplesSumToZero.test_no_zero_sum_triplet
 test_too_few_elements (builtins.TestTriplesSumToZero.test_too_few_elements) ... ok
 test_valid_negative_triplet (builtins.TestTriplesSumToZero.test_valid_negative_triplet) ... ok
 test_valid_triplet_exists (builtins.TestTriplesSumToZero.test_valid_triplet_exists) ... ok
-
-----------------------------------------------------------------------
-Ran 5 tests in 0.000s
-
-OK
-
---- Test Case 44 ---
-test_base_three (builtins.TestChangeBase.test_base_three) ... ok
-test_base_two (builtins.TestChangeBase.test_base_two) ... ok
-test_base_two_seven (builtins.TestChangeBase.test_base_two_seven) ... ok
-test_large_number (builtins.TestChangeBase.test_large_number) ... ok
-test_zero_value (builtins.TestChangeBase.test_zero_value) ... ok
 
 ----------------------------------------------------------------------
 Ran 5 tests in 0.000s
@@ -396,71 +190,12 @@ Ran 5 tests in 0.000s
 
 OK
 
---- Test Case 86 ---
-test_empty_string (builtins.TestAntiShuffle.test_empty_string) ... ok
-test_multiple_words (builtins.TestAntiShuffle.test_multiple_words) ... ok
-test_single_uppercase_word (builtins.TestAntiShuffle.test_single_uppercase_word) ... ok
-test_single_word (builtins.TestAntiShuffle.test_single_word) ... ok
-test_with_special_characters (builtins.TestAntiShuffle.test_with_special_characters) ... ok
-
-----------------------------------------------------------------------
-Ran 5 tests in 0.000s
-
-OK
-
---- Test Case 95 ---
-test_all_lowercase_keys (builtins.TestCheckDictCase.test_all_lowercase_keys) ... FAIL
-test_all_uppercase_keys (builtins.TestCheckDictCase.test_all_uppercase_keys) ... FAIL
-test_mixed_case_keys (builtins.TestCheckDictCase.test_mixed_case_keys) ... ok
-test_non_string_key (builtins.TestCheckDictCase.test_non_string_key) ... ERROR
-test_title_case_keys (builtins.TestCheckDictCase.test_title_case_keys) ... ok
-
-======================================================================
-ERROR: test_non_string_key (builtins.TestCheckDictCase.test_non_string_key)
-----------------------------------------------------------------------
-Traceback (most recent call last):
-  File "<string>", line 11, in test_non_string_key
-  File "<string>", line 4, in check_dict_case
-  File "<string>", line 4, in <genexpr>
-AttributeError: 'int' object has no attribute 'casefold'
-
-======================================================================
-FAIL: test_all_lowercase_keys (builtins.TestCheckDictCase.test_all_lowercase_keys)
-----------------------------------------------------------------------
-Traceback (most recent call last):
-  File "<string>", line 5, in test_all_lowercase_keys
-AssertionError: False is not true
-
-======================================================================
-FAIL: test_all_uppercase_keys (builtins.TestCheckDictCase.test_all_uppercase_keys)
-----------------------------------------------------------------------
-Traceback (most recent call last):
-  File "<string>", line 17, in test_all_uppercase_keys
-AssertionError: False is not true
-
-----------------------------------------------------------------------
-Ran 5 tests in 0.001s
-
-FAILED (failures=2, errors=1)
-
 --- Test Case 107 ---
 test_example_one (builtins.TestEvenOddPalindrome.test_example_one) ... ok
 test_example_two (builtins.TestEvenOddPalindrome.test_example_two) ... ok
 test_full_range_check (builtins.TestEvenOddPalindrome.test_full_range_check) ... ok
 test_single_digit (builtins.TestEvenOddPalindrome.test_single_digit) ... ok
 test_upper_bound (builtins.TestEvenOddPalindrome.test_upper_bound) ... ok
-
-----------------------------------------------------------------------
-Ran 5 tests in 0.000s
-
-OK
-
---- Test Case 109 ---
-test_empty_array (builtins.TestMoveOneBall.test_empty_array) ... ok
-test_invalid_shift (builtins.TestMoveOneBall.test_invalid_shift) ... ok
-test_single_element (builtins.TestMoveOneBall.test_single_element) ... ok
-test_sorted_array (builtins.TestMoveOneBall.test_sorted_array) ... ok
-test_valid_shift (builtins.TestMoveOneBall.test_valid_shift) ... ok
 
 ----------------------------------------------------------------------
 Ran 5 tests in 0.000s

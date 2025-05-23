@@ -1,8 +1,6 @@
 {
   "32": {
-    "total": 5,
-    "passed": 0,
-    "failed": 5,
+    "error": "'(' was never closed (<string>, line 5)",
     "success_ratio": 0.0
   },
   "34": {
@@ -12,9 +10,7 @@
     "success_ratio": 1.0
   },
   "38": {
-    "total": 5,
-    "passed": 0,
-    "failed": 5,
+    "error": "unmatched ')' (<string>, line 6)",
     "success_ratio": 0.0
   },
   "45": {
@@ -29,9 +25,9 @@
   },
   "83": {
     "total": 5,
-    "passed": 4,
-    "failed": 1,
-    "success_ratio": 0.8
+    "passed": 5,
+    "failed": 0,
+    "success_ratio": 1.0
   },
   "162": {
     "total": 5,
@@ -72,10 +68,8 @@
     "success_ratio": 1.0
   },
   "59": {
-    "total": 5,
-    "passed": 5,
-    "failed": 0,
-    "success_ratio": 1.0
+    "error": "invalid syntax (<string>, line 5)",
+    "success_ratio": 0.0
   },
   "69": {
     "total": 5,
@@ -84,10 +78,8 @@
     "success_ratio": 1.0
   },
   "90": {
-    "total": 5,
-    "passed": 5,
-    "failed": 0,
-    "success_ratio": 1.0
+    "error": "unindent does not match any outer indentation level (<string>, line 4)",
+    "success_ratio": 0.0
   },
   "91": {
     "total": 5,
@@ -103,9 +95,9 @@
   },
   "97": {
     "total": 5,
-    "passed": 1,
-    "failed": 4,
-    "success_ratio": 0.2
+    "passed": 5,
+    "failed": 0,
+    "success_ratio": 1.0
   },
   "40": {
     "total": 5,
@@ -114,10 +106,8 @@
     "success_ratio": 1.0
   },
   "44": {
-    "total": 5,
-    "passed": 5,
-    "failed": 0,
-    "success_ratio": 1.0
+    "error": "unexpected indent (<string>, line 3)",
+    "success_ratio": 0.0
   },
   "48": {
     "total": 5,
@@ -138,16 +128,12 @@
     "success_ratio": 1.0
   },
   "86": {
-    "total": 5,
-    "passed": 5,
-    "failed": 0,
-    "success_ratio": 1.0
+    "error": "unmatched ')' (<string>, line 2)",
+    "success_ratio": 0.0
   },
   "95": {
-    "total": 5,
-    "passed": 2,
-    "failed": 3,
-    "success_ratio": 0.4
+    "error": "unterminated string literal (detected at line 13) (<string>, line 13)",
+    "success_ratio": 0.0
   },
   "107": {
     "total": 5,
@@ -156,10 +142,8 @@
     "success_ratio": 1.0
   },
   "109": {
-    "total": 5,
-    "passed": 5,
-    "failed": 0,
-    "success_ratio": 1.0
+    "error": "unindent does not match any outer indentation level (<string>, line 4)",
+    "success_ratio": 0.0
   },
   "112": {
     "total": 5,
