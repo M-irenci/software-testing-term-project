@@ -9,7 +9,7 @@ import unittest
 import io
 from contextlib import redirect_stdout, redirect_stderr
 
-with open("gemini_test_data.json", "r", encoding="utf-8") as file:
+with open("gemini/gemini_test_data.json", "r", encoding="utf-8") as file:
     gemini_outputs: dict[int, dict[str, str]] = json.load(file)
 
 test_results = {}
