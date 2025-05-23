@@ -19,7 +19,7 @@ chosen_test_prompts = {
     "hard": [40, 44, 48, 66, 67, 86, 95, 107, 109, 112, 128],
 }
 
-with open("manuel_unit_tests/prompts.json", "r", encoding="utf-8") as file:
+with open("manuel_unit_tests/prompts_gemini.json", "r", encoding="utf-8") as file:
     manuel_tests: dict[int, dict[str, str]] = json.load(file)
 
 for test_count, difficulty in enumerate(chosen_test_prompts, 2):
