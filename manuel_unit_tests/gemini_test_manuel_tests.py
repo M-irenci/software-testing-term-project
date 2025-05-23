@@ -9,7 +9,7 @@ import unittest
 import io
 from contextlib import redirect_stdout, redirect_stderr
 
-with open("manuel_unit_tests/prompts.json", "r", encoding="utf-8") as file:
+with open("manuel_unit_tests/prompts_gemini.json", "r", encoding="utf-8") as file:
     manuel_tests: dict[int, dict[str, str]] = json.load(file)
 
 with open("gemini/gemini_test_data.json", "r", encoding="utf-8") as file:
@@ -17,7 +17,7 @@ with open("gemini/gemini_test_data.json", "r", encoding="utf-8") as file:
 
 test_results = {}
 success_ratios = {}
-for index, data in list(manuel_tests.items())[1:]:
+for index, data in list(manuel_tests.items())[:]:
     try:
         local_env = {}
         gemini_func = re.findall(r"```python(.*?)```", gemini_outputs[index]["result_prompts"], re.DOTALL)

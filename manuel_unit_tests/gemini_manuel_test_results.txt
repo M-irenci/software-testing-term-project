@@ -1,9 +1,14 @@
 --- Test Case 32 ---
+test_cubic_zero (builtins.TestFindZero.test_cubic_zero) ... ok
+test_large_coefficients (builtins.TestFindZero.test_large_coefficients) ... ok
+test_linear_zero (builtins.TestFindZero.test_linear_zero) ... ok
+test_negative_root (builtins.TestFindZero.test_negative_root) ... ok
+test_zero_at_origin (builtins.TestFindZero.test_zero_at_origin) ... ok
 
-Build error
+----------------------------------------------------------------------
+Ran 5 tests in 0.001s
 
-
-
+OK
 
 --- Test Case 34 ---
 test_all_duplicates (builtins.TestUnique.test_all_duplicates) ... ok
@@ -13,7 +18,7 @@ test_mixed_duplicates (builtins.TestUnique.test_mixed_duplicates) ... ok
 test_unsorted_input (builtins.TestUnique.test_unsorted_input) ... ok
 
 ----------------------------------------------------------------------
-Ran 5 tests in 0.001s
+Ran 5 tests in 0.000s
 
 OK
 
@@ -54,23 +59,16 @@ Ran 5 tests in 0.000s
 OK
 
 --- Test Case 83 ---
-test_edge_case_two (builtins.TestStartsOneEnds.test_edge_case_two) ... FAIL
+test_edge_case_two (builtins.TestStartsOneEnds.test_edge_case_two) ... ok
 test_large_digit (builtins.TestStartsOneEnds.test_large_digit) ... ok
 test_single_digit (builtins.TestStartsOneEnds.test_single_digit) ... ok
 test_three_digits (builtins.TestStartsOneEnds.test_three_digits) ... ok
 test_two_digits (builtins.TestStartsOneEnds.test_two_digits) ... ok
 
-======================================================================
-FAIL: test_edge_case_two (builtins.TestStartsOneEnds.test_edge_case_two)
 ----------------------------------------------------------------------
-Traceback (most recent call last):
-  File "<string>", line 17, in test_edge_case_two
-AssertionError: 0.18 != 0
+Ran 5 tests in 0.000s
 
-----------------------------------------------------------------------
-Ran 5 tests in 0.001s
-
-FAILED (failures=1)
+OK
 
 --- Test Case 162 ---
 test_empty_string (builtins.TestStringToMd5.test_empty_string) ... ok
@@ -217,44 +215,16 @@ Ran 5 tests in 0.000s
 OK
 
 --- Test Case 97 ---
-test_both_negative (builtins.TestMultiply.test_both_negative) ... FAIL
-test_negative_number (builtins.TestMultiply.test_negative_number) ... FAIL
-test_positive_digits (builtins.TestMultiply.test_positive_digits) ... FAIL
-test_single_digits (builtins.TestMultiply.test_single_digits) ... FAIL
+test_both_negative (builtins.TestMultiply.test_both_negative) ... ok
+test_negative_number (builtins.TestMultiply.test_negative_number) ... ok
+test_positive_digits (builtins.TestMultiply.test_positive_digits) ... ok
+test_single_digits (builtins.TestMultiply.test_single_digits) ... ok
 test_zero_unit_digit (builtins.TestMultiply.test_zero_unit_digit) ... ok
 
-======================================================================
-FAIL: test_both_negative (builtins.TestMultiply.test_both_negative)
 ----------------------------------------------------------------------
-Traceback (most recent call last):
-  File "<string>", line 17, in test_both_negative
-AssertionError: 2 != 12
+Ran 5 tests in 0.000s
 
-======================================================================
-FAIL: test_negative_number (builtins.TestMultiply.test_negative_number)
-----------------------------------------------------------------------
-Traceback (most recent call last):
-  File "<string>", line 14, in test_negative_number
-AssertionError: 0 != 20
-
-======================================================================
-FAIL: test_positive_digits (builtins.TestMultiply.test_positive_digits)
-----------------------------------------------------------------------
-Traceback (most recent call last):
-  File "<string>", line 5, in test_positive_digits
-AssertionError: 6 != 16
-
-======================================================================
-FAIL: test_single_digits (builtins.TestMultiply.test_single_digits)
-----------------------------------------------------------------------
-Traceback (most recent call last):
-  File "<string>", line 8, in test_single_digits
-AssertionError: 2 != 72
-
-----------------------------------------------------------------------
-Ran 5 tests in 0.001s
-
-FAILED (failures=4)
+OK
 
 --- Test Case 40 ---
 test_all_positive (builtins.TestTriplesSumToZero.test_all_positive) ... ok
@@ -281,23 +251,16 @@ Ran 5 tests in 0.000s
 OK
 
 --- Test Case 48 ---
-test_case_sensitivity (builtins.TestIsPalindrome.test_case_sensitivity) ... FAIL
+test_case_sensitivity (builtins.TestIsPalindrome.test_case_sensitivity) ... ok
 test_empty_string (builtins.TestIsPalindrome.test_empty_string) ... ok
 test_non_palindrome (builtins.TestIsPalindrome.test_non_palindrome) ... ok
 test_repeating_characters (builtins.TestIsPalindrome.test_repeating_characters) ... ok
 test_simple_palindrome (builtins.TestIsPalindrome.test_simple_palindrome) ... ok
 
-======================================================================
-FAIL: test_case_sensitivity (builtins.TestIsPalindrome.test_case_sensitivity)
 ----------------------------------------------------------------------
-Traceback (most recent call last):
-  File "<string>", line 17, in test_case_sensitivity
-AssertionError: True is not false
+Ran 5 tests in 0.000s
 
-----------------------------------------------------------------------
-Ran 5 tests in 0.001s
-
-FAILED (failures=1)
+OK
 
 --- Test Case 66 ---
 test_empty_string (builtins.TestDigitSum.test_empty_string) ... ok

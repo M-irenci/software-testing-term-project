@@ -18,9 +18,13 @@ chosen_test_prompts = {
     "moderate": [33, 37, 42, 53, 59, 69, 90, 91, 94, 97],
     "hard": [40, 44, 48, 66, 67, 86, 95, 107, 109, 112, 128],
 }
+
+with open("manuel_unit_tests/prompts.json", "r", encoding="utf-8") as file:
+    manuel_tests: dict[int, dict[str, str]] = json.load(file)
+
 for test_count, difficulty in enumerate(chosen_test_prompts, 2):
     for index in chosen_test_prompts[difficulty]:
-        sample = dataset['test'][index]
+        sample = manuel_tests[str(index)]
         prompt = ("""You are a software engineer that is to only return 
                     the code that will be generated according to this prompt. 
                     Do not add any additional text.\n""" + sample['prompt'])
@@ -45,5 +49,5 @@ for test_count, difficulty in enumerate(chosen_test_prompts, 2):
 
         sleep(9) # for api restrictions
 
-with open("gemini_test_data.json", "w", encoding="utf-8") as file:
+with open("gemini/gemini_test_data.json", "w", encoding="utf-8") as file:
     json.dump(gemini_outputs, file, ensure_ascii=False, indent=2)

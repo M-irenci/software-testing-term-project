@@ -1,8 +1,8 @@
 {
   "32": {
     "diff": "easy",
-    "prompt": "import math\n\n\ndef poly(xs: list, x: float):\n    \"\"\"\n    Evaluates polynomial with coefficients xs at point x.\n    return xs[0] + xs[1] * x + xs[1] * x^2 + .... xs[n] * x^n\n    \"\"\"\n    return sum([coeff * math.pow(x, i) for i, coeff in enumerate(xs)])\n\n\ndef find_zero(xs: list):\n    \"\"\" xs are coefficients of a polynomial.\n    find_zero find x such that poly(x) = 0.\n    find_zero returns only only zero point, even if there are many.\n    Moreover, find_zero only takes list xs having even number of coefficients\n    and largest non zero coefficient as it guarantees\n    a solution.\n    >>> round(find_zero([1, 2]), 2) # f(x) = 1 + 2x\n    -0.5\n    >>> round(find_zero([-6, 11, -6, 1]), 2) # (x - 1) * (x - 2) * (x - 3) = -6 + 11x - 6x^2 + x^3\n    1.0\n    \"\"\"\n",
-    "tests": "import unittest\r\nimport math\r\n\r\nclass TestFindZero(unittest.TestCase):\r\n    def test_linear_zero(self):\r\n        self.assertAlmostEqual(find_zero([1, 2]), -0.5, places=2)\r\n\r\n    def test_cubic_zero(self):\r\n        self.assertAlmostEqual(find_zero([-6, 11, -6, 1]), 1.0, places=2)\r\n\r\n    def test_zero_at_origin(self):\r\n        self.assertAlmostEqual(find_zero([0, 0, 1]), 0.0, places=2)\r\n\r\n    def test_negative_root(self):\r\n        self.assertAlmostEqual(find_zero([2, 0, -8]), -0.5, places=2)\r\n\r\n    def test_large_coefficients(self):\r\n        self.assertAlmostEqual(find_zero([1000, -5000, 6000]), 1.0, places=2)\r\n"
+    "prompt": "import math\n\n\ndef poly(xs: list, x: float):\n    \"\"\"\n    Evaluates polynomial with coefficients xs at point x.\n    return xs[0] + xs[1] * x + xs[1] * x^2 + .... xs[n] * x^n\n    \"\"\"\n    return sum([coeff * math.pow(x, i) for i, coeff in enumerate(xs)])\n\n\ndef find_zero(xs: list):\n    \"\"\" xs are coefficients of a polynomial.\n    find_zero find x such that poly(x) = 0.\n    find_zero returns only only zero point, even if there are many.\n    Moreover, find_zero only takes list xs having even number of coefficients\n    and largest non zero coefficient as it guarantees\n    a solution.\nNewton-Raphson method should be included.\n   >>> round(find_zero([1, 2]), 2) # f(x) = 1 + 2x\n    -0.5\n    >>> round(find_zero([-6, 11, -6, 1]), 2) # (x - 1) * (x - 2) * (x - 3) = -6 + 11x - 6x^2 + x^3\n    1.0\n    \"\"\"\n",
+    "tests": "import unittest\r\nimport math\r\n\r\nclass TestFindZero(unittest.TestCase):\r\n    def test_linear_zero(self):\r\n        self.assertAlmostEqual(find_zero([1, 2]), -0.5, places=2)\r\n\r\n    def test_cubic_zero(self):\r\n        self.assertAlmostEqual(find_zero([-6, 11, -6, 1]), 1.0, places=2)\r\n\r\n    def test_zero_at_origin(self):\r\n        self.assertAlmostEqual(find_zero([0, 0]), 0.0, places=2)\r\n\r\n    def test_negative_root(self):\r\n        self.assertAlmostEqual(find_zero([4, 2]), -2, places=2)\r\n\r\n    def test_large_coefficients(self):\r\n        self.assertAlmostEqual(find_zero([1000, -5000]), 0.2, places=2)\r\n"
   },
   "34": {
     "diff": "easy",
@@ -11,7 +11,7 @@
   },
   "38": {
     "diff": "easy",
-    "prompt": "\n\ndef encode_cyclic(s: str):\n    \"\"\"\n    returns encoded string by cycling groups of three characters.\n    \"\"\"\n    # split string to groups. Each of length 3.\n    groups = [s[(3 * i):min((3 * i + 3), len(s))] for i in range((len(s) + 2) // 3)]\n    # cycle elements in each group. Unless group has fewer elements than 3.\n    groups = [(group[1:] + group[0]) if len(group) == 3 else group for group in groups]\n    return \"\".join(groups)\n\n\ndef decode_cyclic(s: str):\n    \"\"\"\n    takes as input string encoded with encode_cyclic function. Returns decoded string.\n    \"\"\"\n",
+    "prompt": "\n\ndef encode_cyclic(s: str):\n    \"\"\"\n    returns encoded string by cycling groups of three characters.\n    \"\"\"\n    # split string to groups. Each of length 3.\n    groups = [s[(3 * i):min((3 * i + 3), len(s))] for i in range((len(s) + 2) // 3)]\n    # cycle elements in each group. Unless group has fewer elements than 3.\n    groups = [(group[1:] + group[0]) if len(group) == 3 else group for group in groups]\n    return \"\".join(groups)\n\n\ndef decode_cyclic(s: str):\n    \"\"\"\n    takes as input string encoded with encode_cyclic function. Returns decoded string.\n   encode_cyclic function should be in the response without any change\n    \"\"\"\n",
     "tests": "import unittest\r\n\r\nclass TestCyclicEncoding(unittest.TestCase):\r\n    def test_full_groups(self):\r\n        self.assertEqual(decode_cyclic(encode_cyclic(\"abcdefghi\")), \"abcdefghi\")\r\n\r\n    def test_partial_group_end(self):\r\n        self.assertEqual(decode_cyclic(encode_cyclic(\"abcdefgh\")), \"abcdefgh\")\r\n\r\n    def test_two_character_string(self):\r\n        self.assertEqual(decode_cyclic(encode_cyclic(\"ab\")), \"ab\")\r\n\r\n    def test_single_character_string(self):\r\n        self.assertEqual(decode_cyclic(encode_cyclic(\"x\")), \"x\")\r\n\r\n    def test_empty_string(self):\r\n        self.assertEqual(decode_cyclic(encode_cyclic(\"\")), \"\")\r\n"
   },
   "45": {
@@ -26,8 +26,8 @@
   },
   "83": {
     "diff": "easy",
-    "prompt": "\ndef starts_one_ends(n):\n    \"\"\"\n    Given a positive integer n, return the count of the numbers of n-digit\n    positive integers that start or end with 1.\n    \"\"\"\n",
-    "tests": "import unittest\n\nclass TestStartsOneEnds(unittest.TestCase):\n    def test_single_digit(self):\n        self.assertEqual(starts_one_ends(1), 1)\n\n    def test_two_digits(self):\n        self.assertEqual(starts_one_ends(2), 18)\n\n    def test_three_digits(self):\n        self.assertEqual(starts_one_ends(3), 180)\n\n    def test_large_digit(self):\n        self.assertTrue(starts_one_ends(6) > 0)\n\n    def test_edge_case_two(self):\n        self.assertEqual(starts_one_ends(0), 0)"
+    "prompt": "\ndef starts_one_ends(n):\n    \"\"\"\n    Given a positive integer n, return the count of the numbers of n-digit\n    positive integers that start or end with 1.\n   Exclude numbers that start with zero like \"01\", \"021\".\n     \"\"\"\n",
+    "tests": "import unittest\n\nclass TestStartsOneEnds(unittest.TestCase):\n    def test_single_digit(self):\n        self.assertEqual(starts_one_ends(1), 1)\n\n    def test_two_digits(self):\n        self.assertEqual(starts_one_ends(2), 18)\n\n    def test_three_digits(self):\n        self.assertEqual(starts_one_ends(3), 180)\n\n    def test_large_digit(self):\n        self.assertTrue(starts_one_ends(6) > 0)\n\n    def test_edge_case_two(self):\n        self.assertEqual(starts_one_ends(4), 1800)"
   },
   "162": {
     "diff": "easy",
@@ -81,7 +81,7 @@
   },
   "91": {
     "diff": "moderate",
-    "prompt": "\ndef is_bored(S):\n    \"\"\"\n    You'll be given a string of words, and your task is to count the number\n    of boredoms. A boredom is a sentence that starts with the word \"I\".\n    Sentences are delimited by '.', '?' or '!'.\n   \n    For example:\n    >>> is_bored(\"Hello world\")\n    0\n    >>> is_bored(\"The sky is blue. The sun is shining. I love this weather\")\n    1\n    \"\"\"\n",
+    "prompt": "\ndef is_bored(S):\n    \"\"\"\n    You'll be given a string of words, and your task is to count the number\n    of boredoms. A boredom is a sentence that starts with the word \"I\" but not \"i\".\n    Sentences are delimited by '.', '?' or '!'.\n   \n    For example:\n    >>> is_bored(\"Hello world\")\n    0\n    >>> is_bored(\"The sky is blue. The sun is shining. I love this weather\")\n    1\n    \"\"\"\n",
     "tests": "import unittest\n\nclass TestIsBored(unittest.TestCase):\n    def test_no_boredom(self):\n        self.assertEqual(is_bored(\"Hello world\"), 0)\n\n    def test_single_boredom(self):\n        self.assertEqual(is_bored(\"I am bored.\"), 1)\n\n    def test_multiple_boredoms(self):\n        self.assertEqual(is_bored(\"I am here. I am bored! I want fun?\"), 3)\n\n    def test_irregular_spacing(self):\n        self.assertEqual(is_bored(\"   I am alone .You are here. I know!\"), 2)\n\n    def test_lowercase_i(self):\n        self.assertEqual(is_bored(\"i am small. I am big.\"), 1)"
   },
   "94": {
@@ -91,7 +91,7 @@
   },
   "97": {
     "diff": "moderate",
-    "prompt": "\ndef multiply(a, b):\n    \"\"\"Complete the function that takes two integers and returns \n    the product of their unit digits.\n    Assume the input is always valid.\n    Examples:\n    multiply(148, 412) should return 16.\n    multiply(19, 28) should return 72.\n    multiply(2020, 1851) should return 0.\n    multiply(14,-15) should return 20.\n    \"\"\"\n",
+    "prompt": "\ndef multiply(a, b):\n    \"\"\"Complete the function that takes two integers and returns \n    the product of their unit digits.\n    Assume the input is always valid.\n    Examples:\n    multiply(148, 412) should return 16.\n    multiply(19, 28) should return 72.\n    multiply(2020, 1851) should return 0.\n    multiply(14,-15) should return 20.\n    \"\"\"\n    Do the operations on different lines",
     "tests": "import unittest\n\nclass TestMultiply(unittest.TestCase):\n    def test_positive_digits(self):\n        self.assertEqual(multiply(148, 412), 16)\n\n    def test_single_digits(self):\n        self.assertEqual(multiply(9, 8), 72)\n\n    def test_zero_unit_digit(self):\n        self.assertEqual(multiply(2020, 1851), 0)\n\n    def test_negative_number(self):\n        self.assertEqual(multiply(14, -15), 20)\n\n    def test_both_negative(self):\n        self.assertEqual(multiply(-24, -13), 12)"
 },
   "40": {
@@ -106,7 +106,7 @@
   },
   "48": {
     "diff": "hard",
-    "prompt": "\n\ndef is_palindrome(text: str):\n    \"\"\"\n    Checks if given string is a palindrome\n    >>> is_palindrome('')\n    True\n    >>> is_palindrome('aba')\n    True\n    >>> is_palindrome('aaaaa')\n    True\n    >>> is_palindrome('zbcd')\n    False\n    \"\"\"\n",
+    "prompt": "\n\ndef is_palindrome(text: str):\n    \"\"\"\n    Checks if given string is a palindrome\n    >>> is_palindrome('')\n    True\n    >>> is_palindrome('aba')\n    True\n    >>> is_palindrome('aaaaa')\n    True\n    >>> is_palindrome('zbcd')\n    False\n   Consider case sensitivity\n    \"\"\"\n",
     "tests": "import unittest\n\nclass TestIsPalindrome(unittest.TestCase):\n    def test_empty_string(self):\n        self.assertTrue(is_palindrome(''))\n\n    def test_simple_palindrome(self):\n        self.assertTrue(is_palindrome('aba'))\n\n    def test_repeating_characters(self):\n        self.assertTrue(is_palindrome('aaaaa'))\n\n    def test_non_palindrome(self):\n        self.assertFalse(is_palindrome('zbcd'))\n\n    def test_case_sensitivity(self):\n        self.assertFalse(is_palindrome('Aba'))"
   },
   "66": {
@@ -126,7 +126,7 @@
   },
   "95": {
     "diff": "hard",
-    "prompt": "\ndef check_dict_case(dict):\n    \"\"\"\n    Given a dictionary, return True if all keys are strings in lower \n    case or all keys are strings in upper case, else return False.\n    The function should return False is the given dictionary is empty.\n    Examples:\n    check_dict_case({\"a\":\"apple\", \"b\":\"banana\"}) should return True.\n    check_dict_case({\"a\":\"apple\", \"A\":\"banana\", \"B\":\"banana\"}) should return False.\n    check_dict_case({\"a\":\"apple\", 8:\"banana\", \"a\":\"apple\"}) should return False.\n    check_dict_case({\"Name\":\"John\", \"Age\":\"36\", \"City\":\"Houston\"}) should return False.\n    check_dict_case({\"STATE\":\"NC\", \"ZIP\":\"12345\" }) should return True.\n    \"\"\"\n",
+    "prompt": "\ndef check_dict_case(dict):\n    \"\"\"\n    Given a dictionary, return True if all keys are strings in lower \n    case or all keys are strings in upper case, else return False.\n    The function should return False is the given dictionary is empty.\n    Examples:\n    check_dict_case({\"a\":\"apple\", \"b\":\"banana\"}) should return True.\n    check_dict_case({\"a\":\"apple\", \"A\":\"banana\", \"B\":\"banana\"}) should return False.\n    check_dict_case({\"a\":\"apple\", 8:\"banana\", \"a\":\"apple\"}) should return False.\n    check_dict_case({\"Name\":\"John\", \"Age\":\"36\", \"City\":\"Houston\"}) should return False.\n    check_dict_case({\"STATE\":\"NC\", \"ZIP\":\"12345\" }) should return True.\n    Utilize advanced logic for detecting case by setting \"lower\" or \"upper\" or \"title\" for corresponding cases  \"\"\"\n",
     "tests": "import unittest\n\nclass TestCheckDictCase(unittest.TestCase):\n    def test_all_lowercase_keys(self):\n        self.assertTrue(check_dict_case({\"a\":\"apple\", \"b\":\"banana\"}))\n\n    def test_mixed_case_keys(self):\n        self.assertFalse(check_dict_case({\"a\":\"apple\", \"A\":\"banana\", \"B\":\"banana\"}))\n\n    def test_non_string_key(self):\n        self.assertFalse(check_dict_case({\"a\":\"apple\", 8:\"banana\", \"a\":\"apple\"}))\n\n    def test_title_case_keys(self):\n        self.assertFalse(check_dict_case({\"Name\":\"John\", \"Age\":\"36\", \"City\":\"Houston\"}))\n\n    def test_all_uppercase_keys(self):\n        self.assertTrue(check_dict_case({\"STATE\":\"NC\", \"ZIP\":\"12345\"}))"
   },
   "107": {
