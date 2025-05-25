@@ -41,16 +41,7 @@ prompt_text = f"""
 
 You will be given 3 different prompts. Each prompt will be a different function that you need to implement.
 You need to implement a class that will have these three functions.
-The third function needs to call the second function in the end.
-You also need to implement a new function.
-The new function must use all three of the given methods to check if a string can be rearranged to become a palindrome.
-The new function should take a string, remove the characters that prevent it from being a palindrome, use concatenate function to attach front and back of output string until a palindrome is obtained.
-Make sure a character has attached that many times to the front and back of the string, since remove_delete all instances of the character.
-The new function will be called `rearrange_palindrome`.
-The new function will get a string to rearrange. If the function has more than one odd character count, it will return None.
-The new function will return the result palindrome, None if there isn't an output and a boolean to show the output for tests.
-Make sure to use all three of the given methods to check if a string can be rearranged to become a palindrome.
-Make sure odd characters are in the middle of the string.
+
 
 Here is the first prompt for the first function:
 {updated_prompts[prompt_indexes[0]]['prompt']}
@@ -61,11 +52,26 @@ Here is the second prompt for the second function:
 Here is the third prompt for the third function:
 {updated_prompts[prompt_indexes[2]]['prompt']}
 
-You need to implement a class that will have these three functions and the fourth function as described.
+---
 
+You also need to implement a new function.
+The fourth Python function called `rearrange_palindrome` that takes a string `s` and tries to rearrange its characters to form a palindrome.
+You must use all three of the given methods to check if a string can be rearranged to become a palindrome in the fourth function.
 
-You need to write a class that will have the functions concatenate, is_palindrome reverse_delete that are explained above.
-You must use all three of the given methods to check if a string can be rearranged to become a palindrome in the fourth new function.
+If it's possible to rearrange the characters into a valid palindrome, return a tuple of the form `(palindrome_string, True)`, where `palindrome_string` is the rearranged palindrome.
+
+If it's not possible to form a palindrome with the given characters, return `(None, False)`.
+
+Additional requirements:
+- The function must use `collections.Counter` to count character frequencies.
+- At most one character may have an odd count in order for a palindrome to be possible.
+- If a palindrome is possible, build it by placing the even-count characters symmetrically and the odd-count character (if any) in the middle.
+- Use a helper function called `concatenate` to combine string parts.
+- Use a helper function called `is_palindrome` to check if the final string is a valid palindrome.
+- Do not use external libraries apart from Python standard library.
+- Always use parentheses to avoid errors caused by process precedence
+
+Class name should be `PalindromeOperations`.
 """
 
 # Save Gemini response
