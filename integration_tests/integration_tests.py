@@ -11,7 +11,7 @@ from groq import Groq
 genai.configure(api_key="AIzaSyC9cnqwS1y8DUJkt0RLirFxHYG7KUCoL9I")
 gemini_model = genai.GenerativeModel("gemini-2.0-flash")
 
-llama_client = Groq(api_key="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")
+llama_client = Groq(api_key="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")
 
 def generate_llama(system_prompt: str, user_prompt: str):
     chat_completion = llama_client.chat.completions.create(

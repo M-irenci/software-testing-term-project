@@ -31,7 +31,7 @@ def generate_content(system_prompt: str, user_prompt: str):
 
 
 dataset = load_dataset("openai_humaneval")
-client = Groq(api_key="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")
+client = Groq(api_key="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")
 
 llama_outputs: dict[int, dict[str, str]] = {}
 chosen_test_prompts = {
