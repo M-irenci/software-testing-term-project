@@ -61,6 +61,9 @@ SOFTWARE-TESTING-TERM-PROJECT
     - `python test_gemini_data.py` for Gemini tests.
     - `python test_llama_data.py` for LLaMA tests.
     - `integration_tests.py ` for LLaMA tests.
+
+OR 
+   Run `python gemini_prompt.py` or `python llama_prompt.py` and then run their respective `python gemini_test_manuel_tests.py` or `python llama_test_manuel_tests.py` for phase 2 versions.
 3. The results will be saved in the `.json` files.
 
 
