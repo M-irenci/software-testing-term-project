@@ -1,7 +1,9 @@
 {
   "32": {
-    "error": "'(' was never closed (<string>, line 5)",
-    "success_ratio": 0.0
+    "total": 5,
+    "passed": 5,
+    "failed": 0,
+    "success_ratio": 1.0
   },
   "34": {
     "total": 5,
@@ -10,8 +12,10 @@
     "success_ratio": 1.0
   },
   "38": {
-    "error": "unmatched ')' (<string>, line 6)",
-    "success_ratio": 0.0
+    "total": 5,
+    "passed": 5,
+    "failed": 0,
+    "success_ratio": 1.0
   },
   "45": {
     "total": 5,
@@ -20,7 +24,7 @@
     "success_ratio": 1.0
   },
   "50": {
-    "error": "'return' outside function (<string>, line 1)",
+    "error": "closing parenthesis ']' does not match opening parenthesis '(' (<string>, line 2)",
     "success_ratio": 0.0
   },
   "83": {
@@ -36,12 +40,16 @@
     "success_ratio": 1.0
   },
   "28": {
-    "error": "'return' outside function (<string>, line 1)",
-    "success_ratio": 0.0
+    "total": 5,
+    "passed": 5,
+    "failed": 0,
+    "success_ratio": 1.0
   },
   "29": {
-    "error": "'return' outside function (<string>, line 1)",
-    "success_ratio": 0.0
+    "total": 5,
+    "passed": 5,
+    "failed": 0,
+    "success_ratio": 1.0
   },
   "33": {
     "total": 5,
@@ -68,18 +76,22 @@
     "success_ratio": 1.0
   },
   "59": {
-    "error": "invalid syntax (<string>, line 5)",
-    "success_ratio": 0.0
-  },
-  "69": {
     "total": 5,
     "passed": 5,
     "failed": 0,
     "success_ratio": 1.0
   },
+  "69": {
+    "total": 5,
+    "passed": 3,
+    "failed": 2,
+    "success_ratio": 0.6
+  },
   "90": {
-    "error": "unindent does not match any outer indentation level (<string>, line 4)",
-    "success_ratio": 0.0
+    "total": 5,
+    "passed": 5,
+    "failed": 0,
+    "success_ratio": 1.0
   },
   "91": {
     "total": 5,
@@ -106,8 +118,10 @@
     "success_ratio": 1.0
   },
   "44": {
-    "error": "unexpected indent (<string>, line 3)",
-    "success_ratio": 0.0
+    "total": 5,
+    "passed": 5,
+    "failed": 0,
+    "success_ratio": 1.0
   },
   "48": {
     "total": 5,
@@ -128,12 +142,16 @@
     "success_ratio": 1.0
   },
   "86": {
-    "error": "unmatched ')' (<string>, line 2)",
-    "success_ratio": 0.0
+    "total": 5,
+    "passed": 5,
+    "failed": 0,
+    "success_ratio": 1.0
   },
   "95": {
-    "error": "unterminated string literal (detected at line 13) (<string>, line 13)",
-    "success_ratio": 0.0
+    "total": 5,
+    "passed": 5,
+    "failed": 0,
+    "success_ratio": 1.0
   },
   "107": {
     "total": 5,
@@ -142,8 +160,10 @@
     "success_ratio": 1.0
   },
   "109": {
-    "error": "unindent does not match any outer indentation level (<string>, line 4)",
-    "success_ratio": 0.0
+    "total": 5,
+    "passed": 5,
+    "failed": 0,
+    "success_ratio": 1.0
   },
   "112": {
     "total": 5,

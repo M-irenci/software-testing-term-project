@@ -49,7 +49,8 @@ for test_count, difficulty in enumerate(chosen_test_prompts, 2):
         prompt = (
             "You are a software engineer",
             """Only return the code that will be generated according to this prompt. 
-                Do not add any additional text.\n""" + sample['prompt'])
+                Do not add any additional text.
+                Also, make sure all return statements are inside functions.\n""" + sample['prompt'])
         result_prompts = generate_content(*prompt)
 
         test_prompt = (
